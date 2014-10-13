@@ -1,0 +1,17 @@
+"LaTeX specific settings
+
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+colorscheme slate
+hi TabLineFill term=bold cterm=bold  guibg=dark
+
+set iskeyword+=:
+
+set spell spelllang=en_gb
+
+"let Tex_FoldedSections=""
+"let Tex_FoldedEnvironments=""
+"let Tex_FoldedMisc=""

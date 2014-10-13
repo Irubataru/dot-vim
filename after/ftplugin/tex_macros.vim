@@ -1,0 +1,6 @@
+call IMAP('`w','\omega','tex')
+call IMAP('`N','\nabla','tex')
+call IMAP('`f','\phi','tex')
+call IMAP('`e','\epsilon','tex')
+call IMAP('LLL','\mathcal{L}','tex')
+call IMAP('`%','\tfrac{<++>}{<++>}<++>','tex')

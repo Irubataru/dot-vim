@@ -1,0 +1,12 @@
+:insert
+//Created: 
+//Modified: 
+//Author: Jonas R. Glesaaen (jonas@glesaaen.com)
+#include<iostream>
+using namespace std;
+
+int main(int argc, char **argv)
+{
+	
+}
+.

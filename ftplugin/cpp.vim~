@@ -1,0 +1,7 @@
+"C++ specific settings
+
+autocmd BufWinLeave *.cpp mkview
+autocmd BufWinEnter *.cpp silent loadview
+
+set foldmethod=syntax
+set foldlevelstart=0
