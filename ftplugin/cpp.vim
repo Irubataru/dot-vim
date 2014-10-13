@@ -5,11 +5,6 @@ autocmd BufWinEnter *.cpp silent loadview
 
 autocmd InsertEnter *.cpp set foldmethod=manual
 autocmd InsertLeave *.cpp set foldmethod=syntax
-"autocmd InsertEnter * bufdo! set foldmethod=manual
-"autocmd InsertEnter * bufdo! mkview
-"autocmd InsertLeave * bufdo! silent loadview
-"autocmd InsertLeave * bufdo! set foldmethod=syntax
-
 
 nnoremap <leader>rf :set foldlevel=0<CR>
 nnoremap <leader>rF :set foldlevel=1<CR>
