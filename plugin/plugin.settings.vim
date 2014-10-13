@@ -79,6 +79,7 @@ let g:ctrlp_cmd = 'CtrlP'
 "vim-template
 "{{{
 let g:templates_no_autocmd = 1
+let g:template_dir = "$HOME/.vim/templates"
 "}}}
 
 ""slimv

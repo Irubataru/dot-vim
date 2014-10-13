@@ -1,0 +1,9 @@
+/*
+ * Created: %DAY%-%MONTH%-%YEAR%
+ * Modified: 
+ * Author: Jonas R. Glesaaen (jonas@glesaaen.com)
+ */
+
+#include"%FILE%.hpp"
+
+%HERE%

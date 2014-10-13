@@ -1,0 +1,10 @@
+/*
+ * Created: %DAY%-%MONTH%-%YEAR%
+ * Modified: 
+ * Author: Jonas R. Glesaaen (jonas@glesaaen.com)
+ */
+
+int main(int argc, char **argv)
+{
+  %HERE%
+}
