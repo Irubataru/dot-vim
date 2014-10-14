@@ -10,6 +10,9 @@ set history=50          " keep 50 lines of command line history
 set incsearch           " do incremental searching
 filetype on
 
+set wildmode=longest,list,full " bash-like filename autocompletion
+set wildmenu                   " zsh-like filename list chooser
+
 set backupdir=~/.tmp
 
 " Don't use Ex mode, use Q for formatting
