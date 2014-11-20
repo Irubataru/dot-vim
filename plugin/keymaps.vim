@@ -33,6 +33,9 @@ nnoremap <leader>ec :cclose<CR>
 "YouCompleteMe
 "{{{
 nmap <leader>rc :YcmDiags<CR>
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
 "}}}
 
 "NERDCommenter
