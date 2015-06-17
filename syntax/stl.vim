@@ -711,6 +711,9 @@ if !exists("cpp_no_cpp11")
     syntax keyword cppSTLfunction addressof
     syntax keyword cppSTLfunction align
 
+    syntax keyword cppSTLfunction make_shared
+    syntax keyword cppSTLfunction make_unique
+
     " function object
     syntax keyword cppSTLfunction bind
     syntax keyword cppSTLtype is_bind_expression
