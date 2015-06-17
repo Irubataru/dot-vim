@@ -77,3 +77,9 @@ else
   set backup            " keep a backup file
 endif
 "}}}
+
+" Fixing folding when chaning mode
+"{{{
+autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
+autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
+"}}}
