@@ -4,7 +4,7 @@
  * Author: Jonas R. Glesaaen (jonas@glesaaen.com)
  */
 
-int main(int argc, char **argv)
+int main(int, char**)
 {
   %HERE%
 }
