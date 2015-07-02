@@ -94,6 +94,12 @@ nnoremap <leader>gg :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 "}}}
 
+"hardmode
+"{{{
+noremap <leader>H <Esc>:call ToggleHardMode()<CR>
+"}}}
+
+
 " Commands for compiling and running C++ programs
 "{{{
 :command C :exec ":!${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
