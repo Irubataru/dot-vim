@@ -80,6 +80,6 @@ endif
 
 " Fixing folding when chaning mode
 "{{{
-autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
-autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
+"autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
+"autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
 "}}}
