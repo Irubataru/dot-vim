@@ -15,6 +15,14 @@ set wildmenu                   " zsh-like filename list chooser
 
 set backupdir=~/.tmp
 
+set relativenumber " Relative line numbering per default
+
+" Dont move with the arrows
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 

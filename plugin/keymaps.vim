@@ -8,6 +8,8 @@ nnoremap <leader>tj :execute "tabmove" tabpagenr() - 2 <CR>
 nnoremap <space> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 
+nnoremap <C-m> :call NumberToggle()<cr>
+
 :command Qt tabclose
 
 " F4 toggles hlsearch
@@ -132,4 +134,12 @@ function s:Fancy_Quickfix_Cmd(Cmd)
 		TlistSync
 	endif
 endfunction
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
 ""}}}
