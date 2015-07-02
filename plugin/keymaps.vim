@@ -34,8 +34,8 @@ nnoremap <leader>ec :cclose<CR>
 "{{{
 nmap <leader>rc :YcmDiags<CR>
 nnoremap <leader>gt :YcmCompleter GoTo<CR>
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gD :YcmCompleter GoToDeclaration<CR>
 "}}}
 
 "NERDCommenter
@@ -84,6 +84,12 @@ map <Leader><Leader>h <Plug>(easymotion-linebackward)
 "tagbar
 "{{{
 nmap <F8> :TagbarToggle<CR>
+"}}}
+
+"fugitive.vim
+"{{{
+nnoremap <leader>gg :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
 "}}}
 
 " Commands for compiling and running C++ programs
