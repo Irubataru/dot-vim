@@ -3,3 +3,4 @@ clang/*
 view/*
 */tags
 *~
+*.swp
