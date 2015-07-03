@@ -12,13 +12,6 @@ nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 
 nnoremap <C-m> :call NumberToggle()<cr>
 nnoremap <F4> :call HighLightToggle()<CR>
-
-nnoremap <leader>en :call <SID>Fancy_Quickfix_Cmd(':cnext')<CR>
-nnoremap <leader>eN :call <SID>Fancy_Quickfix_Cmd(':cprev')<CR>
-nnoremap <leader>ee :call <SID>Fancy_Quickfix_Cmd(':cc')<CR>
-nnoremap <leader>eo :cwindow<CR>
-nnoremap <leader>eO :copen<CR>
-nnoremap <leader>ec :cclose<CR>
 "}}}
 
 ""Plugin keymaps
