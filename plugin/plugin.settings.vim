@@ -110,3 +110,10 @@ let g:template_dir = "$HOME/.vim/templates"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 "}}}
+
+"vim-fugitive
+"{{{
+if has("autocmd")
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+endif
+"}}}
