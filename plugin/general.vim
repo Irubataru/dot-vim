@@ -16,6 +16,8 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" Files in general shouldn't start folded, can fix individual files with autocmd
+set foldlevelstart=99
 "}}}
 
 " Makes vim leave insert mode instantly
