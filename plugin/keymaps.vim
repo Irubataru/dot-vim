@@ -8,13 +8,10 @@ nnoremap <leader>tj :execute "tabmove" tabpagenr() - 2 <CR>
 nnoremap <space> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 
-nnoremap <C-m> :call NumberToggle()<cr>
-
 :command Qt tabclose
 
-" F4 toggles hlsearch
-let hlstate=0
-nnoremap <F4> :if (hlstate == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=1-hlstate<cr>
+nnoremap <C-m> :call NumberToggle()<cr>
+nnoremap <F4> :call HighLightToggle()<CR>
 
 nnoremap <leader>en :call <SID>Fancy_Quickfix_Cmd(':cnext')<CR>
 nnoremap <leader>eN :call <SID>Fancy_Quickfix_Cmd(':cprev')<CR>
@@ -146,6 +143,14 @@ function! NumberToggle()
     set norelativenumber
   else
     set relativenumber
+  endif
+endfunc
+
+function! HighLightToggle()
+  if(&hlsearch == 1)
+    set nohlsearch
+  else
+    set hlsearch
   endif
 endfunc
 ""}}}
