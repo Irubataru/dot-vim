@@ -10,6 +10,10 @@ set relativenumber " Relative line numbering per default
 "make it so vimdiff splits vertically every time
 set diffopt=filler,vertical
 
+"Command line file completion
+set wildmode=longest,list,full " bash-like filename autocompletion
+set wildmenu                   " zsh-like filename list chooser
+
 " Dont move with the arrows
 noremap <Up> <NOP>
 noremap <Down> <NOP>
