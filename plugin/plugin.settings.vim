@@ -8,8 +8,6 @@
 let g:ycm_complete_in_strings = 0
 let g:ycm_warning_symbol = '?'
 let g:ycm_error_symbol = '!'
-"let g:ycm_warning_symbol = '⚠'
-"let g:ycm_error_symbol = '☢'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
@@ -24,13 +22,22 @@ let g:ycm_filetype_blacklist = {
       \ 'mail' : 1,
       \ 'tex' : 1
       \}
+"make YCM compatible with UltiSnips (http://stackoverflow.com/a/22253548/2874210)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 "}}}
 
 "UltiSnips
 "{{{
-"let g:UltiSnipsExpandTrigger = "<leader>ue"
-"let g:UltiSnipsJumpForwardTrigger = "<leader>uj"
-"let g:UltiSnipsJumpBackwardTrigger = "<leader>uk"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+"}}}
+
+"supertab
+"{{{
+let g:SuperTabDefaultCompletionType = '<C-n>'
 "}}}
 
 "clang_complete
@@ -51,13 +58,6 @@ let g:ycm_filetype_blacklist = {
 "let g:clang_hl_errors = 1
 "let g:clang_complete_copen = 1
 ""let g:clang_periodic_quickfix = 1
-"}}}
-
-""supertab
-"{{{
-"let g:SuperTabDefaultCompletionType = "<c-x><c-u><c-p>"
-"let g:SuperTabLongestHighlight = 1
-"set completeopt+=longest,menuone
 "}}}
 
 "Latex-Suite
