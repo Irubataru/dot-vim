@@ -34,6 +34,9 @@ if !has('gui-running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
+
+" Disable insert mode escape sequences
+set esckeys 
 "}}}
 
 " Backup if necessary

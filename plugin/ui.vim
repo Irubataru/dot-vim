@@ -6,18 +6,10 @@ let base16colorspace = 256
 set t_Co=16
 set background=dark "/light
 colorscheme solarized
-
-if &t_Co > 2 || has("gui_running")
-  syntax on
-endif
-
 "}}}
 
 " Settings related to text behaviour and margins
 "{{{
-set ruler		          " show the cursor position all the time
-set showcmd		        " display incomplete commands
-set number 		        " display numbered lines
 set scrolloff=10    " number of lines to keep above and below cursor
 
 set wrap              " wrap text
@@ -41,11 +33,4 @@ set shiftwidth=2
 "{{{
 set laststatus=2
 set noshowmode
-"}}}
-
-"Changing colour of the tab-bar
-"{{{
-if !has("gui_running")
-	hi TabLineFill term=bold cterm=bold  guibg=dark
-endif
 "}}}
