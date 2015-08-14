@@ -10,12 +10,13 @@ colorscheme solarized
 
 " Settings related to text behaviour and margins
 "{{{
-set scrolloff=10    " number of lines to keep above and below cursor
+set scrolloff=10      " number of lines to keep above and below cursor
+set number            " show linenumbers
 
 set wrap              " wrap text
 set linebreak         " break lines when wrapping text
 set nolist
-set cinoptions=N-s  " namespaces doesn't count towards indentation
+set cinoptions=N-s    " namespaces doesn't count towards indentation
 set textwidth=130 
 set wrapmargin=0
 
