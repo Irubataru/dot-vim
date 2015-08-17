@@ -6,6 +6,7 @@ let base16colorspace = 256
 set t_Co=16
 set background=dark "/light
 colorscheme solarized
+set conceallevel=1 "Use vims new conceal feature
 "}}}
 
 " Settings related to text behaviour and margins
