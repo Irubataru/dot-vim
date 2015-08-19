@@ -117,3 +117,8 @@ if has("autocmd")
   autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
 "}}}
+
+"vim-notes
+"{{{
+let g:notes_directories = ['~/Dropbox/.vim.notes']
+"}}}
