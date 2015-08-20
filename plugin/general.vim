@@ -46,6 +46,9 @@ if has("vms")
 else
   set backup            " keep a backup file
 endif
+
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
 "}}}
 
 " Fixing folding when chaning mode
