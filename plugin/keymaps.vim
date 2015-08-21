@@ -8,6 +8,8 @@ nnoremap <leader>tj :execute "tabmove" tabpagenr() - 2 <CR>
 nnoremap <space> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 
+nnoremap <leader>rf :set foldlevel=0<CR>
+
 :command Qt tabclose
 
 nnoremap <C-m> :call NumberToggle()<cr>
