@@ -8,6 +8,10 @@ nnoremap <leader>tj :execute "tabmove" tabpagenr() - 2 <CR>
 nnoremap <space> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 
+"Replace the zj zk calls to move to next closed fold
+nnoremap <silent> zj :call NextClosedFold('j')<CR>
+nnoremap <silent> zk :call NextClosedFold('k')<CR>
+
 nnoremap <leader>rf :set foldlevel=0<CR>
 
 :command Qt tabclose
@@ -91,7 +95,6 @@ nnoremap <leader>gc :Gcommit<CR>
 noremap <leader>H <Esc>:call ToggleHardMode()<CR>
 "}}}
 
-
 " Commands for compiling and running C++ programs
 "{{{
 :command C :exec ":!${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
@@ -148,4 +151,20 @@ function! HighLightToggle()
     set hlsearch
   endif
 endfunc
+
+" Move to next closed fold, skipping open opnes
+" Code from: http://stackoverflow.com/questions/9403098/is-it-possible-to-jump-to-closed-folds-in-vim/9407015#9407015
+function! NextClosedFold(dir)
+    let cmd = 'norm!z' . a:dir
+    let view = winsaveview()
+    let [l0, l, open] = [0, view.lnum, 1]
+    while l != l0 && open
+        exe cmd
+        let [l0, l] = [l, line('.')]
+        let open = foldclosed(l) < 0
+    endwhile
+    if open
+        call winrestview(view)
+    endif
+endfunction
 ""}}}
