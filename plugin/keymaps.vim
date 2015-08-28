@@ -1,7 +1,8 @@
 "" - Key mappings for vim -
 "{{{
-noremap <C-h> :tabp<enter>
-noremap <C-l> :tabn<enter>
+noremap <C-Left> :tabp<enter>
+noremap <C-Right> :tabn<enter>
+
 nnoremap <leader>tk :execute "tabmove" tabpagenr() <CR>
 nnoremap <leader>tj :execute "tabmove" tabpagenr() - 2 <CR>
 
@@ -54,10 +55,10 @@ noremap <leader>mc :MBEClose<CR>
 noremap <leader>mt :MBEToggle<CR>
 noremap <leader>mf :MBEFocus<CR>
 noremap <leader>,a :MBEOpenAll<CR>
-noremap <C-Right> :MBEbn<CR>
-noremap <C-Left> :MBEbp<CR>
-noremap <C-Up> :MBEbf<CR>
-noremap <C-Down> :MBEbb<CR>
+noremap <C-l> :MBEbn<CR>
+noremap <C-h> :MBEbp<CR>
+noremap <C-k> :MBEbf<CR>
+noremap <C-j> :MBEbb<CR>
 "}}}
 
 "Latex suite
