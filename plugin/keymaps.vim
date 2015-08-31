@@ -15,9 +15,9 @@ nnoremap <silent> zk :call NextClosedFold('k')<CR>
 
 nnoremap <leader>rf :set foldlevel=0<CR>
 
-:command Qt tabclose
+command Qt tabclose
 
-nnoremap <C-m> :call NumberToggle()<cr>
+"nnoremap <C-m> :call NumberToggle()<cr>
 nnoremap <F4> :call HighLightToggle()<CR>
 "}}}
 
