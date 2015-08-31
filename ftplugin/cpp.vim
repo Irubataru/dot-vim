@@ -3,8 +3,8 @@
 autocmd BufWinLeave *.cpp mkview
 autocmd BufWinEnter *.cpp silent loadview
 
-autocmd InsertLeave,WinEnter *.*pp setlocal foldmethod=syntax
-autocmd InsertEnter,WinLeave *.*pp setlocal foldmethod=manual
+"autocmd InsertLeave,WinEnter *.*pp setlocal foldmethod=syntax
+"autocmd InsertEnter,WinLeave *.*pp setlocal foldmethod=manual
 
 nnoremap <leader>rf :set foldlevel=0<CR>
 nnoremap <leader>rF :set foldlevel=1<CR>
