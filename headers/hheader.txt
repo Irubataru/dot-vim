@@ -1,6 +1,0 @@
-:insert
-//Created: 
-//Modified: 
-//Author: Jonas R. Glesaaen (jonas@glesaaen.com)
-
-.
