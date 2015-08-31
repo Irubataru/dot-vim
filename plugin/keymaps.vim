@@ -57,8 +57,6 @@ noremap <leader>mf :MBEFocus<CR>
 noremap <leader>,a :MBEOpenAll<CR>
 noremap <C-l> :MBEbn<CR>
 noremap <C-h> :MBEbp<CR>
-noremap <C-k> :MBEbf<CR>
-noremap <C-j> :MBEbb<CR>
 "}}}
 
 "Latex suite

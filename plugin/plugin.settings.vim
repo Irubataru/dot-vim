@@ -60,17 +60,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 ""let g:clang_periodic_quickfix = 1
 "}}}
 
-"Latex-Suite
-"{{{
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_MultipleCompileFormats='pdf'
-let g:Tex_GotoError=0
-let g:Tex_FoldedEnvironments=',enum,itemize,tabular,lstlisting,tikzpicture,center,block,solution,question,frame'
-let g:Tex_FoldedCommands=',note'
-"}}}
-
 "CtrlP
 "{{{
 let g:ctrlp_map = '<c-p>'
