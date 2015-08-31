@@ -95,9 +95,6 @@
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/vim-syntax-expand"]
-	path = bundle/vim-syntax-expand
-	url = https://github.com/Olical/vim-syntax-expand.git
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
