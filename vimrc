@@ -17,12 +17,12 @@ Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'fholgado/minibufexpl.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'freitass/todo.txt-vim'
 Plug 'SirVer/ultisnips'
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'tpope/vim-fugitive', { 'on': ['Gstatus', 'Gdiff'] }
+Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes'
 Plug 'aperezdc/vim-template', { 'on': 'Template' }
 
@@ -35,7 +35,7 @@ Plug 'bling/vim-airline'
 Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': './install.sh --clang-completer --system-libclang' }
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
-Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp', 'hpp'] }
+Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp', 'hpp', 'notes'] }
 
 " For LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }
