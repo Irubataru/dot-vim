@@ -72,14 +72,10 @@ let g:templates_no_autocmd = 1
 let g:templates_directory = "$HOME/.vim/templates"
 "}}}
 
-""slimv
+"LaTeX-Box
 "{{{
-"let g:slimv_impl = 'sbcl'
-"let g:slimv_swank_cmd = '!sbcl --load /usr/share/common-lisp/source/slime/start-swank.lisp &'
-"let g:slimv_menu = 1
-"let g:slimv_keybindings = 1
-"let g:slimv_swank_cmd = '! urxvt -e sbcl --load /home/glesaaen/.vim/bundle/slimv/slime/start-swank.lisp &> /dev/null &'
-"let g:slimv_repl_max_len = 150
+let g:LatexBox_latexmk_async = 1
+let g:LatexBox_Folding = 1
 "}}}
 
 ""MiniBufExplorer
