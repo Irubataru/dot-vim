@@ -112,3 +112,8 @@ let g:notes_directories = ['~/Dropbox/.vim.notes']
 "{{{
 let g:bookmark_no_default_key_mappings = 1
 "}}}
+
+"localvimrc
+"{{{
+let g:localvimrc_ask = 0
+"}}}

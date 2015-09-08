@@ -25,6 +25,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes'
 Plug 'aperezdc/vim-template', { 'on': 'Template' }
+Plug 'embear/vim-localvimrc'
 
 " Related to the look
 Plug 'guns/xterm-color-table.vim'
