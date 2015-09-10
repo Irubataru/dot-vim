@@ -24,6 +24,7 @@ Plug 'SirVer/ultisnips'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'aperezdc/vim-template', { 'on': 'Template' }
 Plug 'embear/vim-localvimrc'
 

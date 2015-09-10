@@ -108,6 +108,11 @@ endif
 let g:notes_directories = ['~/Dropbox/.vim.notes']
 "}}}
 
+"vim-session
+"{{{
+let g:session_autosave = 'no'
+"}}}
+
 "vim-bookmarks
 "{{{
 let g:bookmark_no_default_key_mappings = 1
