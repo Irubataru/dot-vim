@@ -1,121 +1,122 @@
 "" - Key mappings for vim -
-"{{{
-noremap <C-Left> :tabp<CR>
-noremap <C-Right> :tabn<CR>
 
-nnoremap <space> zz
-nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
+" Navigation
+" {{{
 
-"Replace the zj zk calls to move to next closed fold
-nnoremap <silent> zj :call NextClosedFold('j')<CR>
-nnoremap <silent> zk :call NextClosedFold('k')<CR>
-
-nnoremap <Leader>rf :set foldlevel=0<CR>
-
-command Qt tabclose
-
-"nnoremap <C-m> :call NumberToggle()<cr>
-nnoremap <F4> :call HighLightToggle()<CR>
-"}}}
-
-""Plugin keymaps
-""{{{
-
-"YouCompleteMe
-"{{{
-nmap <Leader>rc :YcmDiags<CR>
-nnoremap <Leader>gt :YcmCompleter GoTo<CR>
-nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
-"}}}
-
-"NERDCommenter
-"{{{
-let NERDComInsertMap='<c-c>'
-"}}}
-
-"NERDTree
-"{{{
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"}}}
-
-"Latex suite
-"{{{
-map <Leader>lt :TTemplate<cr>
-"}}}
-
-"CtrlP
-"{{{
-" Use a leader instead of the actual named binding
-nmap <leader>p :CtrlP<cr>
-
-" Easy bindings for its various modes
-nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>bm :CtrlPMixed<cr>
-nmap <leader>bs :CtrlPMRU<cr>
-"}}}
-
-"vim-buffergator
-"{{{
-" Go to the previous buffer open
-nnoremap <C-H> :BuffergatorMruCyclePrev<cr>
-
-" Go to the next buffer open
-nnoremap <C-L> :BuffergatorMruCycleNext<cr>
-
-" View the entire list of buffers open
-nnoremap <Leader>bl :BuffergatorOpen<cr>
-"}}}
-
-"Gundo
-"{{{
-nnoremap <Leader>uu :GundoToggle<CR>
-"}}}
-
-"Easymotion
-"{{{
+" Line movement
 map <Leader><Leader>/ <Plug>(easymotion-sn)
 map <Leader><Leader>l <Plug>(easymotion-lineforward)
 map <Leader><Leader>j <Plug>(easymotion-j)
 map <Leader><Leader>k <Plug>(easymotion-k)
 map <Leader><Leader>h <Plug>(easymotion-linebackward)
-"}}}
 
-"tagbar
-"{{{
+" Fold movement
+"" Replace the zj zk calls to move to next closed fold
+nnoremap <silent> zj :call NextClosedFold('j')<CR>
+nnoremap <silent> zk :call NextClosedFold('k')<CR>
+
+" Buffer Movement
+nnoremap <C-H> :BuffergatorMruCyclePrev<cr>
+nnoremap <C-L> :BuffergatorMruCycleNext<cr>
+
+" Tab movement
+noremap <C-Left> :tabp<CR>
+noremap <C-Right> :tabn<CR>
+
+" }}}
+
+" UI Related
+" {{{
+nnoremap <space> zz
+nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
+
+nnoremap <Leader>rf :set foldlevel=0<CR>
+nnoremap <F4> :call HighLightToggle()<CR>
+" }}}
+
+" Plugin keymaps
+" {{{
+
+"" YouCompleteMe
+"" {{{
+nmap <Leader>rc :YcmDiags<CR>
+nnoremap <Leader>gt :YcmCompleter GoTo<CR>
+nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
+"" }}}
+
+"" NERDCommenter
+"" {{{
+let NERDComInsertMap='<C-C>'
+"" }}}
+
+"" NERDTree
+"" {{{
+map <C-N> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"" }}}
+
+""Latex suite
+"" {{{
+map <Leader>lt :TTemplate<cr>
+"" }}}
+
+""CtrlP
+"" {{{
+"" Use a leader instead of the actual named binding
+nmap <leader>p :CtrlP<cr>
+
+"" Easy bindings for its various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
+"" }}}
+
+"" vim-buffergator
+"" {{{
+"" View the entire list of buffers open
+nnoremap <Leader>bl :BuffergatorOpen<cr>
+"" }}}
+
+"" Gundo
+"" {{{
+nnoremap <Leader>uu :GundoToggle<CR>
+"" }}}
+
+"" tagbar
+"" {{{
 nmap <F8> :TagbarToggle<CR>
-"}}}
+"" }}}
 
-"fugitive.vim
-"{{{
+"" fugitive.vim
+"" {{{
 nnoremap <Leader>gg :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
-"}}}
+"" }}}
 
-"hardmode
-"{{{
+"" hardmode
+"" {{{
 noremap <Leader>H <Esc>:call ToggleHardMode()<CR>
-"}}}
+"" }}}
 
-" Commands for compiling and running C++ programs
-"{{{
-:command C :exec ":!${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cc :exec ":!${CXX} -O3 -g ${CFLAGS} -Wall " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cr :exec ":w | !${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command Cg :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cgr :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command C11 :exec ":!${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command C11r :exec ":w | !${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command C11g :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command C11gr :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command R :exec "!./" .substitute(expand("%"),".cpp",".out","g")
-"}}}
+"" Commands for compiling and running C++ programs
+"" {{{
+:command C :exec "":!${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command Cc :exec "":!${CXX} -O3 -g ${CFLAGS} -Wall " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command Cr :exec "":w | !${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command Cg :exec "":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command Cgr :exec "":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command C11 :exec "":!${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command C11r :exec "":w | !${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command C11g :exec "":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command C11gr :exec "":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command R :exec ""!./" .substitute(expand("%"),".cpp",".out","g")
+"" }}}
 
-""}}}
+" }}}
 
-"" Accompanying functions
-""{{{
+" Accompanying functions
+" {{{
 
 "Simple wrapper: do quickfix cmd, center line and if taglist.vim's window is
 "open, sync, from vim.wikia.com/wiki/Search_using_quickfix_to_list_occurences
@@ -163,4 +164,4 @@ function! NextClosedFold(dir)
         call winrestview(view)
     endif
 endfunction
-""}}}
+" }}}

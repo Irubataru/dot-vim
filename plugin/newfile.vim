@@ -17,11 +17,5 @@ function! ModifyHeader()
 endfunction
 
 
-"autocmd bufnewfile *.cpp so /home/glesaaen/.vim/headers/cppheader.txt
-"autocmd bufnewfile *.cpp exe "1," . 3 . "g/Created:.*/s//Created: " .strftime("%d-%m-%Y")
 autocmd Bufwritepre,filewritepre *.cpp call ModifyHeader()
-
-"autocmd bufnewfile *.{h,hpp} exe ":HeaderguardAdd"
-"autocmd bufnewfile *.{h,hpp} so /home/glesaaen/.vim/headers/hheader.txt
-"autocmd bufnewfile *.{h,hpp} exe "1," . 3 . "g/Created:.*/s//Created: " .strftime("%d-%m-%Y")
 autocmd Bufwritepre,filewritepre *.{h,hpp} call ModifyHeader()

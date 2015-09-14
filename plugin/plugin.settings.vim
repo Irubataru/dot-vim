@@ -96,18 +96,6 @@ let g:LatexBox_latexmk_async = 1
 let g:LatexBox_Folding = 1
 "}}}
 
-""MiniBufExplorer
-"{{{
-"map <Leader>b :MiniBufExplorer<cr>
-"map <Leader>mc :CMiniBufExplorer<cr>
-"map <Leader>mu :UMiniBufExplorer<cr>
-"map <Leader>mt :TMiniBufExplorer<cr>
-""let g:miniBufExplMapWindowNavVim = 1 
-"let g:miniBufExplMapWindowNavArrows = 1 
-"let g:miniBufExplMapCTabSwitchBufs = 1 
-"let g:miniBufExplModSelTarget = 1 
-"}}}
-
 "vim-airline
 "{{{
 let g:airline_powerline_fonts = 1

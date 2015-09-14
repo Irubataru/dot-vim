@@ -50,9 +50,3 @@ endif
 autocmd BufWinLeave *.* mkview!
 autocmd BufWinEnter *.* silent loadview
 "}}}
-
-" Fixing folding when chaning mode
-"{{{
-"autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
-"autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
-"}}}
