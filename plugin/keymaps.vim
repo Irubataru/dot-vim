@@ -1,10 +1,14 @@
 "" - Key mappings for vim -
 "{{{
-noremap <C-Left> :tabp<enter>
-noremap <C-Right> :tabn<enter>
 
-nnoremap <leader>tk :execute "tabmove" tabpagenr() <CR>
-nnoremap <leader>tj :execute "tabmove" tabpagenr() - 2 <CR>
+nnoremap <C-L> :bnext<CR>
+nnoremap <C-H> :bprevious<CR>
+
+noremap <C-Left> :tabp<CR>
+noremap <C-Right> :tabn<CR>
+
+nnoremap <Leader>tk :execute "tabmove" tabpagenr() <CR>
+nnoremap <Leader>tj :execute "tabmove" tabpagenr() - 2 <CR>
 
 nnoremap <space> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
@@ -13,7 +17,7 @@ nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 nnoremap <silent> zj :call NextClosedFold('j')<CR>
 nnoremap <silent> zk :call NextClosedFold('k')<CR>
 
-nnoremap <leader>rf :set foldlevel=0<CR>
+nnoremap <Leader>rf :set foldlevel=0<CR>
 
 command Qt tabclose
 
@@ -24,17 +28,12 @@ nnoremap <F4> :call HighLightToggle()<CR>
 ""Plugin keymaps
 ""{{{
 
-"clang_complete
-"{{{
-"nmap <leader>rc :call g:ClangUpdateQuickFix()<CR>
-"}}}
-
 "YouCompleteMe
 "{{{
-nmap <leader>rc :YcmDiags<CR>
-nnoremap <leader>gt :YcmCompleter GoTo<CR>
-nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gD :YcmCompleter GoToDeclaration<CR>
+nmap <Leader>rc :YcmDiags<CR>
+nnoremap <Leader>gt :YcmCompleter GoTo<CR>
+nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
 "}}}
 
 "NERDCommenter
@@ -46,17 +45,6 @@ let NERDComInsertMap='<c-c>'
 "{{{
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"}}}
-
-"MiniBufExplorer
-"{{{
-noremap <leader>me :MBEOpen<CR>
-noremap <leader>mc :MBEClose<CR>
-noremap <leader>mt :MBEToggle<CR>
-noremap <leader>mf :MBEFocus<CR>
-noremap <leader>,a :MBEOpenAll<CR>
-noremap <C-l> :MBEbn<CR>
-noremap <C-h> :MBEbp<CR>
 "}}}
 
 "Latex suite
@@ -85,13 +73,13 @@ nmap <F8> :TagbarToggle<CR>
 
 "fugitive.vim
 "{{{
-nnoremap <leader>gg :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
+nnoremap <Leader>gg :Gstatus<CR>
+nnoremap <Leader>gc :Gcommit<CR>
 "}}}
 
 "hardmode
 "{{{
-noremap <leader>H <Esc>:call ToggleHardMode()<CR>
+noremap <Leader>H <Esc>:call ToggleHardMode()<CR>
 "}}}
 
 " Commands for compiling and running C++ programs
@@ -106,13 +94,6 @@ noremap <leader>H <Esc>:call ToggleHardMode()<CR>
 :command C11g :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
 :command C11gr :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
 :command R :exec "!./" .substitute(expand("%"),".cpp",".out","g")
-"}}}
-
-" Compiling and showing LaTeX documents, primarily 
-"{{{
-:command Tex :exec ":!pdflatex " .expand("%")
-:command Bib :exec ":!pdflatex %; bibtex " .substitute(expand("%"),".tex",".aux","g") "; pdflatex %; pdflatex %"
-:command Pdf :exec ":!zathura " .substitute(expand("%"),".tex",".pdf","g") "> /dev/null 2>&1 &"
 "}}}
 
 ""}}}
