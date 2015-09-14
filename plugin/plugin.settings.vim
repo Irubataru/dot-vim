@@ -62,8 +62,17 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 
 "CtrlP
 "{{{
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
+
+" Use the nearest .git directory as the cwd
+let g:ctrlp_working_path_mode = 'r'
+
+" Keymaps
+nnoremap <Leader>p :CtrlP<CR>
 "}}}
 
 "vim-template

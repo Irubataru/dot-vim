@@ -7,9 +7,6 @@ nnoremap <C-H> :bprevious<CR>
 noremap <C-Left> :tabp<CR>
 noremap <C-Right> :tabn<CR>
 
-nnoremap <Leader>tk :execute "tabmove" tabpagenr() <CR>
-nnoremap <Leader>tj :execute "tabmove" tabpagenr() - 2 <CR>
-
 nnoremap <space> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 
@@ -50,6 +47,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "Latex suite
 "{{{
 map <Leader>lt :TTemplate<cr>
+"}}}
+
+"CtrlP
+"{{{
+" Use a leader instead of the actual named binding
+nmap <leader>p :CtrlP<cr>
+
+" Easy bindings for its various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
 "}}}
 
 "Gundo
