@@ -75,6 +75,15 @@ let g:ctrlp_working_path_mode = 'r'
 nnoremap <Leader>p :CtrlP<CR>
 "}}}
 
+"vim-buffergator
+"{{{
+" Use the right side of the screen
+let g:buffergator_viewport_split_policy = 'R'
+
+" I want my own keymappings...
+let g:buffergator_suppress_keymaps = 1
+"}}}
+
 "vim-template
 "{{{
 let g:templates_no_autocmd = 1

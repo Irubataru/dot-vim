@@ -12,15 +12,18 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'wikitopian/hardmode'
 
-" Additional functionality
+" Buffer and file-management
 Plug 'kien/ctrlp.vim'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+Plug 'MattesGroeger/vim-bookmarks'
+
+" Additional functionality
 Plug 'easymotion/vim-easymotion'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'freitass/todo.txt-vim'
 Plug 'SirVer/ultisnips'
-Plug 'MattesGroeger/vim-bookmarks'
 Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'

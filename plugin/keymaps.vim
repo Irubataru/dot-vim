@@ -1,9 +1,5 @@
 "" - Key mappings for vim -
 "{{{
-
-nnoremap <C-L> :bnext<CR>
-nnoremap <C-H> :bprevious<CR>
-
 noremap <C-Left> :tabp<CR>
 noremap <C-Right> :tabn<CR>
 
@@ -58,6 +54,18 @@ nmap <leader>p :CtrlP<cr>
 nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
+"}}}
+
+"vim-buffergator
+"{{{
+" Go to the previous buffer open
+nnoremap <C-H> :BuffergatorMruCyclePrev<cr>
+
+" Go to the next buffer open
+nnoremap <C-L> :BuffergatorMruCycleNext<cr>
+
+" View the entire list of buffers open
+nnoremap <Leader>bl :BuffergatorOpen<cr>
 "}}}
 
 "Gundo
