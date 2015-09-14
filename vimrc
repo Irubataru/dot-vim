@@ -16,7 +16,6 @@ Plug 'wikitopian/hardmode'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
-Plug 'fholgado/minibufexpl.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'freitass/todo.txt-vim'
