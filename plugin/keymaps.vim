@@ -16,8 +16,10 @@ nnoremap <silent> zj :call NextClosedFold('j')<CR>
 nnoremap <silent> zk :call NextClosedFold('k')<CR>
 
 " Buffer Movement
-nnoremap <C-H> :BuffergatorMruCyclePrev<cr>
-nnoremap <C-L> :BuffergatorMruCycleNext<cr>
+nnoremap <C-H> :bprevious<CR>
+nnoremap <C-L> :bnext<CR>
+nnoremap <Leader>k :BuffergatorMruCyclePrev<cr>
+nnoremap <Leader>j :BuffergatorMruCycleNext<cr>
 
 " Tab movement
 noremap <C-Left> :tabp<CR>
@@ -101,16 +103,16 @@ noremap <Leader>H <Esc>:call ToggleHardMode()<CR>
 
 "" Commands for compiling and running C++ programs
 "" {{{
-:command C :exec "":!${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cc :exec "":!${CXX} -O3 -g ${CFLAGS} -Wall " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cr :exec "":w | !${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command Cg :exec "":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cgr :exec "":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command C11 :exec "":!${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command C11r :exec "":w | !${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command C11g :exec "":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command C11gr :exec "":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command R :exec ""!./" .substitute(expand("%"),".cpp",".out","g")
+:command C :exec ":!${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command Cc :exec ":!${CXX} -O3 -g ${CFLAGS} -Wall " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command Cr :exec ":w | !${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command Cg :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command Cgr :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command C11 :exec ":!${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command C11r :exec ":w | !${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command C11g :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command C11gr :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command R :exec "!./" .substitute(expand("%"),".cpp",".out","g")
 "" }}}
 
 " }}}
