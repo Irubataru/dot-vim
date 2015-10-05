@@ -40,10 +40,12 @@ Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': 
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp', 'hpp', 'notes'] }
+Plug 'Irubataru/pyclewn', { 'for': 'cpp' }
 
 " For LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }
 Plug 'Irubataru/latex-greek-letters', { 'for': 'tex' }
+Plug 'kana/vim-textobj-user', { 'for': 'tex' } | Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
 
 " For JavaScript
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
