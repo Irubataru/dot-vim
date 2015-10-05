@@ -1,3 +1,9 @@
+snippet env "LaTeX environment"
+\begin{${1:env}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
 snippet frame "LaTeX Frame"
 \begin{frame}${1:[fragile]}
 	${2:\frametitle{$3}}
@@ -10,4 +16,31 @@ snippet frametitle "Beamer titleframe"
 	\titlepage
 \end{frame}
 $0
+endsnippet
+
+snippet listing "listing code block"
+\begin{lstlisting}${1:[escapeinside={(*}{*)}]}
+${0:${VISUAL}}
+\end{lstlisting}
+endsnippet
+
+snippet mark "tikz mark insde snippet" s
+(*\tikzmark{${1:tag}}*)$0
+endsnippet
+
+snippet overlay "overlay tikz picture"
+\nointerlineskip
+\begin{tikzpicture}[overlay,remember picture]
+	$0
+\end{tikzpicture}
+endsnippet
+
+snippet color "color marked text"
+{\color{${1:red}}${2:${VISUAL}}}$0
+endsnippet
+
+snippet hcomm "Header comment"
+% `!p snip.rv = "".join("-" for i in t[1])` %
+% ${1:Title} %
+% `!p snip.rv = "".join("-" for i in t[1])` %
 endsnippet

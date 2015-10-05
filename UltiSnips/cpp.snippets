@@ -7,11 +7,12 @@ snippet cl "class .. (class)"
 class ${1:`!p snip.rv = to_camelcase(snip.basename) or "Name"`}
 {
 public:
-	${1/(\w+).*/$1/} ($2);
-	virtual ~${1/(\w+).*/$1/} () ${3:{}}
+	${1/(\w+).*/$1/} ($3);
+	virtual ~${1/(\w+).*/$1/} () ${4:{}}
+	$0
 
 private:
-	${0:/* data */}
+	${2:/* data */}
 };
 endsnippet
 
