@@ -94,6 +94,7 @@ let g:templates_directory = "$HOME/.vim/templates"
 "{{{
 let g:LatexBox_latexmk_async = 1
 let g:LatexBox_Folding = 1
+let g:LatexBox_quickfix = 2
 "}}}
 
 "vim-airline
