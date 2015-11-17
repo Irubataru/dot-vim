@@ -6,3 +6,5 @@ set shiftwidth=2
 set expandtab
 
 setlocal spell spelllang=en_gb
+
+let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
