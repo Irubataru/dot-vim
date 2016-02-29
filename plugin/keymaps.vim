@@ -103,15 +103,9 @@ noremap <Leader>H <Esc>:call ToggleHardMode()<CR>
 
 "" Commands for compiling and running C++ programs
 "" {{{
-:command C :exec ":!${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cc :exec ":!${CXX} -O3 -g ${CFLAGS} -Wall " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cr :exec ":w | !${CXX} -O3 -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command Cg :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command Cgr :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command C11 :exec ":!${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command C11r :exec ":w | !${CXX} -O3 -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
-:command C11g :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
-:command C11gr :exec ":!${CXX} -O3 -g ${CFLAGS} -lgsl -lgslcblas -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g") "; ./" .substitute(expand("%"),".cpp",".out","g")
+:command C :exec ":!${CXX} -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command C11 :exec ":!${CXX} -g ${CFLAGS} -std=c++11 " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
+:command C1y :exec ":!${CXX} -g ${CFLAGS} -std=c++1y " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
 :command R :exec "!./" .substitute(expand("%"),".cpp",".out","g")
 "" }}}
 

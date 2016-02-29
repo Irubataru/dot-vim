@@ -62,20 +62,28 @@ endsnippet
 
 snippet div "<div>" w
 <div>
-	$0
+	${0:${VISUAL}}
 </div>
 endsnippet
 
 snippet div. "<div> with class" w
 <div`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
-	$0
+	${0:${VISUAL}}
 </div>
 endsnippet
 
 snippet div# "<div> with ID & class" w
 <div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""``!p snip.rv=' class="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""`>
-	$0
+	${0:${VISUAL}}
 </div>
+endsnippet
+
+snippet span "<span>" w
+<span>${0:${VISUAL}}</span>
+endsnippet
+
+snippet span. "<span> w class" w
+<span`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>${0:${VISUAL}}</span>
 endsnippet
 
 snippet form "XHTML <form>" w
