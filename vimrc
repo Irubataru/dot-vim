@@ -13,7 +13,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'wikitopian/hardmode'
 
 " Buffer and file-management
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'MattesGroeger/vim-bookmarks'
@@ -33,10 +33,12 @@ Plug 'embear/vim-localvimrc'
 " Related to the look
 Plug 'guns/xterm-color-table.vim'
 Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " For C++
-Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': './install.sh --clang-completer --system-libclang' }
+Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', { 'for': 'cpp', 'do': 'python2 install.py --clang-completer --system-libclang' }
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp', 'hpp', 'notes'] }
