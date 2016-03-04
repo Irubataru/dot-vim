@@ -25,6 +25,8 @@ set foldlevelstart=99
 
 " Make it so I can switch buffers even if they have changed
 set hidden
+
+let g:tex_flavor="latex"
 "}}}
 
 " Makes vim leave insert mode instantly

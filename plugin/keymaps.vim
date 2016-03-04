@@ -31,9 +31,10 @@ noremap <C-Right> :tabn<CR>
 " {{{
 nnoremap <space> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
-
 nnoremap <Leader>rf :set foldlevel=0<CR>
-nnoremap <F4> :call HighLightToggle()<CR>
+
+" Reformat current paragraph
+nnoremap <Leader>ff gqip
 " }}}
 
 " Plugin keymaps
@@ -56,11 +57,6 @@ let NERDComInsertMap='<C-C>'
 "" {{{
 map <C-N> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"" }}}
-
-""Latex suite
-"" {{{
-map <Leader>lt :TTemplate<cr>
 "" }}}
 
 ""CtrlP
@@ -128,22 +124,6 @@ function s:Fancy_Quickfix_Cmd(Cmd)
 		TlistSync
 	endif
 endfunction
-
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunc
-
-function! HighLightToggle()
-  if(&hlsearch == 1)
-    set nohlsearch
-  else
-    set hlsearch
-  endif
-endfunc
 
 " Move to next closed fold, skipping open opnes
 " Code from: http://stackoverflow.com/questions/9403098/is-it-possible-to-jump-to-closed-folds-in-vim/9407015#9407015
