@@ -4,6 +4,20 @@ snippet env "LaTeX environment"
 \end{$1}
 endsnippet
 
+snippet co "Command"
+\\$1{${0:${VISUAL}}}
+endsnippet
+
+snippet eq "Math environment"
+\begin{equation}
+	${0:${VISUAL}}
+\end{equation}
+endsnippet
+
+snippet $ "Math inline"
+\$${0:${VISUAL}}\$
+endsnippet
+
 snippet frame "LaTeX Frame"
 \begin{frame}${1:[fragile]}
 	${2:\frametitle{$3}}
