@@ -5,9 +5,10 @@
 
 "{{{ Solarized theme
 "let base16colorspace = 256
-"set t_Co=16
+"set t_Co=256
 set background=dark
 colorscheme solarized
+"colorscheme twilighted
 "}}}
 
 "{{{ PaperColor theme

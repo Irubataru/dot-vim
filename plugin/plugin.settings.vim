@@ -25,6 +25,7 @@ let g:ycm_filetype_blacklist = {
 "make YCM compatible with UltiSnips (http://stackoverflow.com/a/22253548/2874210)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_autoclose_preview_window_after_completion = 1
 "}}}
 
 "UltiSnips
@@ -94,7 +95,9 @@ let g:templates_directory = "$HOME/.vim/templates"
 "{{{
 let g:LatexBox_latexmk_async = 1
 let g:LatexBox_Folding = 1
+let g:LatexBox_fold_automatic = 0
 let g:LatexBox_quickfix = 2
+let g:LatexBox_no_mappings = 1
 "}}}
 
 "vim-airline
@@ -128,4 +131,10 @@ let g:bookmark_no_default_key_mappings = 1
 "localvimrc
 "{{{
 let g:localvimrc_ask = 0
+let g:localvimrc_sandbox = 0
+"}}}
+
+"vim-togglelist
+"{{{
+let g:toggle_list_no_mappings = 1
 "}}}

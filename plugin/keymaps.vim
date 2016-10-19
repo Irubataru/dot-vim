@@ -33,8 +33,34 @@ nnoremap <space> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 nnoremap <Leader>rf :set foldlevel=0<CR>
 
+" Toggles for quickfix consistent with vim-unimpaired
+" Toggle-command from the vim-togglelist plugin
+nnoremap <script> <silent> coq :call ToggleQuickfixList()<cr>
+nnoremap [oq :copen<cr>
+nnoremap ]oq :cclose<cr>
+
 " Reformat current paragraph
 nnoremap <Leader>ff gqip
+
+" Replace yank with flashy-yank that highlights yanked area
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
+
+" Use incsearch.vim as default search function
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" let incsearch manage hlsearch
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 " }}}
 
 " Plugin keymaps
@@ -95,6 +121,29 @@ nnoremap <Leader>gc :Gcommit<CR>
 "" hardmode
 "" {{{
 noremap <Leader>H <Esc>:call ToggleHardMode()<CR>
+"" }}}
+
+"" TaskList
+"" {{{
+map <Leader>tt <Plug>TaskList
+"" }}}
+
+"" vim-easymotion
+"" {{{
+"<Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 "" }}}
 
 "" Commands for compiling and running C++ programs

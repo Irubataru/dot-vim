@@ -34,6 +34,10 @@ snippet inc "include"
 #include<$1>
 endsnippet
 
+snippet inc" "local include"
+#include"$1"
+endsnippet
+
 snippet ns "namespace .. (namespace)"
 namespace${1/.+/ /m}${1:Namespace} {
 

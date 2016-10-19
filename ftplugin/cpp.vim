@@ -8,6 +8,8 @@ autocmd BufWinEnter *.cpp silent loadview
 
 nnoremap <leader>rf :set foldlevel=0<CR>
 nnoremap <leader>rF :set foldlevel=1<CR>
+nnoremap <leader>ll :Make<CR>
+nnoremap <leader>LL :Make!<CR>
 
 set foldmethod=syntax
 set foldlevelstart=0
