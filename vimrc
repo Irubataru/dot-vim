@@ -47,10 +47,9 @@ Plug 'haya14busa/incsearch.vim'
 " For C++
 Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', 
   \{ 'for': ['cpp', 'javascript'], 'do': 'python2 install.py --clang-completer --tern-completer' }
-"Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', { 'for': ['cpp', 'hpp'] }
 Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
-"Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp', 'hpp', 'notes'] }
-Plug 'Mizuchi/STL-Syntax'
+Plug 'octol/vim-cpp-enhanced-highlight', {'for': [] }
+Plug 'Mizuchi/STL-Syntax', { 'for': [] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
