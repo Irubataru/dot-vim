@@ -48,8 +48,9 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', 
   \{ 'for': ['cpp', 'javascript'], 'do': 'python2 install.py --clang-completer --tern-completer' }
 "Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', { 'for': ['cpp', 'hpp'] }
-"Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
-Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp', 'hpp', 'notes'] }
+Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
+"Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp', 'hpp', 'notes'] }
+Plug 'Mizuchi/STL-Syntax'
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
@@ -68,5 +69,11 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 
 " For Markdown
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }  | Plug 'nelstrom/vim-markdown-folding', { 'for': 'markdown' }
+
+" Other syntax highlighting
+Plug 'vim-scripts/matlab.vim'
+Plug 'rsmenon/vim-mathematica'
+Plug 'vim-scripts/gnuplot.vim'
+
 
 call plug#end()

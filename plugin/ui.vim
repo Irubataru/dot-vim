@@ -4,8 +4,10 @@
 "{{{
 
 "{{{ Solarized theme
-"let base16colorspace = 256
-"set t_Co=256
+let base16colorspace = 256
+set t_Co=256
+"let g:solarized_termcolors=256
+set t_ut= "Fix for bg colour issues in tmux http://sunaku.github.io/vim-256color-bce.html
 set background=dark
 colorscheme solarized
 "colorscheme twilighted
@@ -13,7 +15,6 @@ colorscheme solarized
 
 "{{{ PaperColor theme
 "set t_Co=256
-"set t_ut= "Fix for bg colour issues in tmux http://sunaku.github.io/vim-256color-bce.html
 "set background=light "/dark
 "colorscheme PaperColor
 "}}}
