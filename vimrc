@@ -26,13 +26,16 @@ Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'freitass/todo.txt-vim'
 Plug 'SirVer/ultisnips'
-Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'aperezdc/vim-template', { 'on': 'Template' }
 Plug 'embear/vim-localvimrc'
 Plug 'vim-scripts/TaskList.vim'
 Plug 'itchyny/vim-cursorword', { 'for': 'cpp' }
+
+" git related
+Plug 'tpope/vim-fugitive'  " The best git plugin
+Plug 'airblade/vim-rooter' " Changes the vim directory to project root
 
 " Related to the look
 Plug 'guns/xterm-color-table.vim'
@@ -45,9 +48,11 @@ Plug 'haya14busa/vim-operator-flashy' | Plug 'kana/vim-operator-user'
 Plug 'haya14busa/incsearch.vim'
 
 " For C++
-Plug 'ervandew/supertab' | Plug 'Valloric/YouCompleteMe', 
-  \{ 'for': ['cpp', 'javascript'], 'do': 'python2 install.py --clang-completer --tern-completer' }
-Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
+Plug 'ervandew/supertab' |
+\  Plug 'Valloric/YouCompleteMe', 
+    \{ 'for': ['cpp', 'javascript', 'c'],
+      \'do': 'python2 install.py --clang-completer --tern-completer' }
+"Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': [] }
 Plug 'Mizuchi/STL-Syntax', { 'for': [] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}

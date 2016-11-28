@@ -11,9 +11,9 @@ nnoremap <leader>rF :set foldlevel=1<CR>
 nnoremap <leader>ll :Make<CR>
 nnoremap <leader>LL :Make!<CR>
 
-"set foldmethod=syntax
-"set foldlevelstart=0
-"set foldlevel=0
+set foldmethod=syntax
+set foldlevelstart=0
+set foldlevel=0
 
 "set tabstop=2
 "set expandtab
