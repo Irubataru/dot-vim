@@ -16,7 +16,8 @@ Plug 'wikitopian/hardmode'
 " Buffer and file-management
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | 
+      \ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'milkypostman/vim-togglelist'
 
@@ -44,14 +45,15 @@ Plug 'Irubataru/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'haya14busa/vim-operator-flashy' | Plug 'kana/vim-operator-user'
+Plug 'haya14busa/vim-operator-flashy' | 
+      \ Plug 'kana/vim-operator-user'
 Plug 'haya14busa/incsearch.vim'
 
 " For C++
 Plug 'ervandew/supertab' |
-\  Plug 'Valloric/YouCompleteMe', 
-    \{ 'for': ['cpp', 'javascript', 'c'],
-      \'do': 'python2 install.py --clang-completer --tern-completer' }
+      \  Plug 'Valloric/YouCompleteMe', 
+            \{ 'for': ['cpp', 'javascript', 'c'],
+            \  'do': 'python2 install.py --clang-completer --tern-completer' }
 "Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': [] }
 Plug 'Mizuchi/STL-Syntax', { 'for': [] }
@@ -59,11 +61,14 @@ Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
 Plug 'Irubataru/pyclewn', { 'for': 'cpp' }
+Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
+      \ Plug 'kana/vim-operator-user'
 
 " For LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }
 Plug 'Irubataru/latex-greek-letters', { 'for': 'tex' }
-Plug 'kana/vim-textobj-user', { 'for': 'tex' } | Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
+Plug 'kana/vim-textobj-user', { 'for': 'tex' } |
+      \ Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
 
 " For JavaScript
 Plug 'marijnh/tern_for_vim', { 'for': [], 'do': 'npm install' }
@@ -72,7 +77,8 @@ Plug 'Olical/vim-syntax-expand', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
 
 " For Markdown
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }  | Plug 'nelstrom/vim-markdown-folding', { 'for': 'markdown' }
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }  |
+      \ Plug 'nelstrom/vim-markdown-folding', { 'for': 'markdown' }
 
 " Other syntax highlighting
 Plug 'vim-scripts/matlab.vim'

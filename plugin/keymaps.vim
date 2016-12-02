@@ -74,6 +74,12 @@ nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
 "" }}}
 
+"" vim-clang-format
+"" {{{
+autocmd FileType c,cpp nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp vnoremap <buffer><Leader>cf :ClangFormat<CR>
+"" }}}
+
 "" NERDCommenter
 "" {{{
 let NERDComInsertMap='<C-C>'

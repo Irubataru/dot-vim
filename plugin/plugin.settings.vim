@@ -138,3 +138,11 @@ let g:localvimrc_sandbox = 0
 "{{{
 let g:toggle_list_no_mappings = 1
 "}}}
+
+"vim-clang-format
+"{{{
+let g:clang_format#code_style = "google"
+let g:clang_format#style_options = {
+            \ "BreakBeforeBraces" : "Stroustrup",
+            \ "Standard" : "C++11"}
+"}}}
