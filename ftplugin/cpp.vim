@@ -19,4 +19,4 @@ set foldlevel=0
 "set expandtab
 "set shiftwidth=2
 
-"let &colorcolumn="80,".join(range(120,999),",")
+let &colorcolumn="80,".join(range(120,999),",")

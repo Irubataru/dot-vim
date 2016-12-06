@@ -40,9 +40,9 @@ Plug 'airblade/vim-rooter' " Changes the vim directory to project root
 
 " Related to the look
 Plug 'guns/xterm-color-table.vim'
-"Plug 'altercation/vim-colors-solarized'
 Plug 'Irubataru/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'haya14busa/vim-operator-flashy' | 
@@ -55,12 +55,12 @@ Plug 'ervandew/supertab' |
             \{ 'for': ['cpp', 'javascript', 'c'],
             \  'do': 'python2 install.py --clang-completer --tern-completer' }
 "Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
-Plug 'octol/vim-cpp-enhanced-highlight', {'for': [] }
-Plug 'Mizuchi/STL-Syntax', { 'for': [] }
+Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
+"Plug 'Mizuchi/STL-Syntax', { 'for': [] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
-Plug 'Irubataru/pyclewn', { 'for': 'cpp' }
+"Plug 'Irubataru/pyclewn', { 'for': 'cpp' }
 Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
       \ Plug 'kana/vim-operator-user'
 

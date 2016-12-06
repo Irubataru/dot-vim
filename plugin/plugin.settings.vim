@@ -41,24 +41,9 @@ let g:UltiSnipsEditSplit="vertical"
 let g:SuperTabDefaultCompletionType = '<C-n>'
 "}}}
 
-"clang_complete
+"vim-cpp-enhanced-highlight
 "{{{
-"let g:clang_auto_select = 1
-"let g:clang_complete_auto = 1
-"let g:clang_complete_patterns = 1
-"let g:clang_use_library=1
-"let g:clang_snippets = 1
-"let g:clang_conceal_snippets=1
-""let g:clang_close_preview = 1
-
-"let g:clang_user_options = '-std=c++11'
-"let g:clang_auto_user_options = '.clang_complete'
-""let g:clang_auto_user_options = ''
-"let g:clang_library_path="/usr/lib/llvm-3.4/lib"
-
-"let g:clang_hl_errors = 1
-"let g:clang_complete_copen = 1
-""let g:clang_periodic_quickfix = 1
+let g:cpp_experimental_template_highlight = 1
 "}}}
 
 "CtrlP
@@ -139,9 +124,14 @@ let g:localvimrc_sandbox = 0
 let g:toggle_list_no_mappings = 1
 "}}}
 
+"operator-flashy
+"{{{
+let g:operator#flashy#group = 'Base16Flashy'
+"}}}
+
 "vim-clang-format
 "{{{
-let g:clang_format#code_style = "google"
+let g:clang_format#code_style = "llvm"
 let g:clang_format#style_options = {
             \ "BreakBeforeBraces" : "Stroustrup",
             \ "Standard" : "C++11"}
