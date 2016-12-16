@@ -63,6 +63,11 @@ Plug 'majutsushi/tagbar', {'for': 'cpp'}
 "Plug 'Irubataru/pyclewn', { 'for': 'cpp' }
 Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
       \ Plug 'kana/vim-operator-user'
+"Plug 'LucHermitte/vim-refactor' |
+      "\ Plug 'LucHermitte/lh-vim-lib' |
+      "\ Plug 'LucHermitte/lh-brackets' |
+      "\ Plug 'LucHermitte/lh-dev' |
+      "\ Plug 'LucHermitte/lh-tags'
 
 " For LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }
