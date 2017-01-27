@@ -91,7 +91,7 @@ map <C-N> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "" }}}
 
-""CtrlP
+"" CtrlP
 "" {{{
 "" Use a leader instead of the actual named binding
 nmap <leader>p :CtrlP<cr>

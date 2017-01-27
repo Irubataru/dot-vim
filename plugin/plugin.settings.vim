@@ -133,6 +133,13 @@ let g:operator#flashy#group = 'Base16Flashy'
 "{{{
 let g:clang_format#code_style = "llvm"
 let g:clang_format#style_options = {
-            \ "BreakBeforeBraces" : "Stroustrup",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "BreakBeforeBraces" : "Allman",
+            \ "ConstructorInitializerAllOnOneLineOrOnePerLine" : "true",
             \ "Standard" : "C++11"}
+"}}}
+
+"indentLine
+"{{{
+let g:indentLine_enabled = 1
 "}}}

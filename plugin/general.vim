@@ -21,7 +21,7 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Files in general shouldn't start folded, can fix individual files with autocmd
-set foldlevelstart=99
+"set foldlevelstart=99
 
 " Make it so I can switch buffers even if they have changed
 set hidden

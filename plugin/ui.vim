@@ -39,7 +39,7 @@ set wrap              " wrap text
 set linebreak         " break lines when wrapping text
 set nolist
 set cinoptions=N-s    " namespaces doesn't count towards indentation
-set textwidth=130 
+set textwidth=80
 set wrapmargin=0
 
 set formatoptions+=l
