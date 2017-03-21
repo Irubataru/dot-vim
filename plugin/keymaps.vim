@@ -46,21 +46,28 @@ nnoremap <Leader>ff gqip
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
-" Use incsearch.vim as default search function
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+if !has('nvim')
+  " Use incsearch.vim as default search function
+  map /  <Plug>(incsearch-forward)
+  map ?  <Plug>(incsearch-backward)
+  map g/ <Plug>(incsearch-stay)
 
-" let incsearch manage hlsearch
-" :h g:incsearch#auto_nohlsearch
-set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
+  " let incsearch manage hlsearch
+  " :h g:incsearch#auto_nohlsearch
+  set hlsearch
+  let g:incsearch#auto_nohlsearch = 1
+  map n  <Plug>(incsearch-nohl-n)
+  map N  <Plug>(incsearch-nohl-N)
+  map *  <Plug>(incsearch-nohl-*)
+  map #  <Plug>(incsearch-nohl-#)
+  map g* <Plug>(incsearch-nohl-g*)
+  map g# <Plug>(incsearch-nohl-g#)
+endif
+" }}}
+
+" Terminal related
+" {{{
+tnoremap <Esc> <C-\><C-n>
 " }}}
 
 " Plugin keymaps
@@ -150,6 +157,11 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+"" }}}
+
+"" signify
+"" {{{
+nnoremap <Leader>ss :SignifyToggle<CR>
 "" }}}
 
 "" Commands for compiling and running C++ programs

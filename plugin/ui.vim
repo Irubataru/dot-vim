@@ -52,6 +52,13 @@ set expandtab
 set shiftwidth=2
 "}}}
 
+" Other settings
+"{{{
+if has('nvim')
+  set inccommand=nosplit
+endif
+"}}}
+
 "Settings for Powerline
 "{{{
 set laststatus=2

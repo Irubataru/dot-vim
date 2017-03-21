@@ -143,3 +143,9 @@ let g:clang_format#style_options = {
 "{{{
 let g:indentLine_enabled = 1
 "}}}
+
+"chromatica.nvim
+"{{{
+let g:chromatica#libclang_path='/home/glesaaen/.vim/clang'
+let g:chromatica#highlight_feature_level=1
+"}}}

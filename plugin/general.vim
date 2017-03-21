@@ -40,8 +40,8 @@ if !has('gui-running')
   augroup END
 endif
 
-" Disable insert mode escape sequences
-set esckeys 
+"" Disable insert mode escape sequences
+"set esckeys 
 "}}}
 
 " Backup if necessary
@@ -52,6 +52,6 @@ else
   set backup            " keep a backup file
 endif
 
-autocmd BufWinLeave *.* mkview!
-autocmd BufWinEnter *.* silent loadview
+"autocmd BufWinLeave *.* mkview!
+"autocmd BufWinEnter *.* silent loadview
 "}}}

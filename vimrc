@@ -1,17 +1,21 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype plugin on
 
 " Get plugins using Plug
 call plug#begin("~/.vim/plugged")
 
 " General plugins
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-dispatch'
 Plug 'wikitopian/hardmode'
+
+if !has('nvim') 
+  Plug 'tpope/vim-sensible'
+endif 
 
 " Buffer and file-management
 Plug 'ctrlpvim/ctrlp.vim'
@@ -47,22 +51,23 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'haya14busa/vim-operator-flashy' | 
       \ Plug 'kana/vim-operator-user'
-Plug 'haya14busa/incsearch.vim'
 Plug 'Yggdroot/indentLine',                 " Display vertical bars for each indent level
   \ {'for': ['cpp', 'javascript', 'html']}
+
+" neovim bug: https://github.com/haya14busa/incsearch.vim/issues/125
+if !has('nvim')
+  Plug 'haya14busa/incsearch.vim'
+endif
 
 " For C++
 Plug 'ervandew/supertab' |
       \  Plug 'Valloric/YouCompleteMe', 
             \{ 'for': ['cpp', 'javascript', 'c'],
             \  'do': 'python2 install.py --clang-completer --tern-completer' }
-"Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
-"Plug 'Mizuchi/STL-Syntax', { 'for': [] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
-"Plug 'Irubataru/pyclewn', { 'for': 'cpp' }
 Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
       \ Plug 'kana/vim-operator-user'
 
@@ -87,5 +92,15 @@ Plug 'vim-scripts/matlab.vim'
 Plug 'rsmenon/vim-mathematica'
 Plug 'vim-scripts/gnuplot.vim'
 
+" Other filetype specific plugins
+Plug 'google/vim-ft-bzl'
+"Plug 'chrisbra/csv.vim', { 'for': 'csv' }
+
+" nvim dependent plugins
+if has('nvim')
+  Plug 'mhinz/vim-signify'
+  "Plug 'arakashic/chromatica.nvim', { 'for': ['cpp'], 'do': ':UpdateRemotePlugins' }
+  "Plug 'critiqjo/lldb.nvim'
+endif
 
 call plug#end()
