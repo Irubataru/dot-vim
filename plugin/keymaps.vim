@@ -46,23 +46,21 @@ nnoremap <Leader>ff gqip
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
-if !has('nvim')
-  " Use incsearch.vim as default search function
-  map /  <Plug>(incsearch-forward)
-  map ?  <Plug>(incsearch-backward)
-  map g/ <Plug>(incsearch-stay)
+" Use incsearch.vim as default search function
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
-  " let incsearch manage hlsearch
-  " :h g:incsearch#auto_nohlsearch
-  set hlsearch
-  let g:incsearch#auto_nohlsearch = 1
-  map n  <Plug>(incsearch-nohl-n)
-  map N  <Plug>(incsearch-nohl-N)
-  map *  <Plug>(incsearch-nohl-*)
-  map #  <Plug>(incsearch-nohl-#)
-  map g* <Plug>(incsearch-nohl-g*)
-  map g# <Plug>(incsearch-nohl-g#)
-endif
+" let incsearch manage hlsearch
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 " }}}
 
 " Terminal related

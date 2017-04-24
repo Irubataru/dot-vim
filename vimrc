@@ -53,11 +53,7 @@ Plug 'haya14busa/vim-operator-flashy' |
       \ Plug 'kana/vim-operator-user'
 Plug 'Yggdroot/indentLine',                 " Display vertical bars for each indent level
   \ {'for': ['cpp', 'javascript', 'html']}
-
-" neovim bug: https://github.com/haya14busa/incsearch.vim/issues/125
-if !has('nvim')
-  Plug 'haya14busa/incsearch.vim'
-endif
+Plug 'haya14busa/incsearch.vim'
 
 " For C++
 Plug 'ervandew/supertab' |
