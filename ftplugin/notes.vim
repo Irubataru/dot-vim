@@ -7,9 +7,8 @@ set spell
 vnoremap <Leader>gt :NoteFromSelectedText<CR>
 nnoremap <Leader>gt viw:NoteFromSelectedText<CR>
 
-" Set no timeout for mappings
-" TODO: Find a better solution to this, it makes editing a bit weird
-set notimeout
+" Set set a short timeout for mappings
+set timeoutlen=300
 
 " Setting up quick mapping of the greek alphabet
 inoremap <buffer> \a α

@@ -29,21 +29,6 @@ set hidden
 let g:tex_flavor="latex"
 "}}}
 
-" Makes vim leave insert mode instantly
-"{{{
-if !has('gui-running')
-  set ttimeoutlen=10
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
-endif
-
-"" Disable insert mode escape sequences
-"set esckeys 
-"}}}
-
 " Backup if necessary
 "{{{
 if has("vms")
