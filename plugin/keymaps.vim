@@ -73,10 +73,10 @@ tnoremap <Esc> <C-\><C-n>
 
 "" YouCompleteMe
 "" {{{
-nmap <Leader>rc :YcmDiags<CR>
-nnoremap <Leader>gt :YcmCompleter GoTo<CR>
-nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
+autocmd FileType c,cpp noremap <Leader>rc :YcmDiags<CR>
+autocmd FileType c,cpp noremap <Leader>gt :YcmCompleter GoTo<CR>
+autocmd FileType c,cpp noremap <Leader>gd :YcmCompleter GoToDefinition<CR>
+autocmd FileType c,cpp noremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
 "" }}}
 
 "" vim-clang-format
