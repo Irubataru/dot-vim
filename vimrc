@@ -59,7 +59,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'ervandew/supertab' |
       \  Plug 'Valloric/YouCompleteMe', 
             \{ 'for': ['cpp', 'javascript', 'c'],
-            \  'do': 'python2 install.py --clang-completer --tern-completer' }
+            \  'do': 'python2 install.py --clang-completer' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
