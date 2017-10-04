@@ -25,7 +25,7 @@ let g:ycm_filetype_blacklist = {
 "make YCM compatible with UltiSnips (http://stackoverflow.com/a/22253548/2874210)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 "}}}
 
 "UltiSnips
@@ -142,6 +142,7 @@ let g:clang_format#style_options = {
 "indentLine
 "{{{
 let g:indentLine_enabled = 1
+let g:indentLine_setConceal = 0
 "}}}
 
 "chromatica.nvim

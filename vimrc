@@ -47,18 +47,19 @@ Plug 'guns/xterm-color-table.vim'
 Plug 'Irubataru/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/base16-vim'
+Plug 'trevordmiller/nova-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'haya14busa/vim-operator-flashy' | 
       \ Plug 'kana/vim-operator-user'
-Plug 'Yggdroot/indentLine',                 " Display vertical bars for each indent level
-  \ {'for': ['cpp', 'javascript', 'html']}
+"Plug 'Yggdroot/indentLine',                 " Display vertical bars for each indent level
+  "\ {'for': ['cpp', 'javascript', 'html']}
 Plug 'haya14busa/incsearch.vim'
 
 " For C++
 Plug 'ervandew/supertab' |
       \  Plug 'Valloric/YouCompleteMe', 
-            \{ 'for': ['cpp', 'javascript', 'c'],
+            \{ 'for': ['cpp', 'javascript', 'c', 'python'],
             \  'do': 'python2 install.py --clang-completer' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
@@ -66,6 +67,10 @@ Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
 Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
       \ Plug 'kana/vim-operator-user'
+
+" For python
+Plug 'w0rp/ale', { 'for': 'python' }
+Plug 'google/yapf', { 'for': 'python' }
 
 " For LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }
@@ -84,7 +89,7 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' }  |
       \ Plug 'nelstrom/vim-markdown-folding', { 'for': 'markdown' }
 
 " Other syntax highlighting
-Plug 'vim-scripts/matlab.vim'
+Plug 'lazywei/vim-matlab'
 Plug 'rsmenon/vim-mathematica'
 Plug 'vim-scripts/gnuplot.vim'
 

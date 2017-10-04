@@ -18,6 +18,7 @@ let base16colorspace = 256
 "set t_ut= "Fix for bg colour issues in tmux http://sunaku.github.io/vim-256color-bce.html
 "set background=dark
 colorscheme base16-default-dark
+"colorscheme base16-default-light
 hi Base16Flashy term=bold ctermbg=18 guibg=#282828
 "}}}
 
@@ -27,7 +28,12 @@ hi Base16Flashy term=bold ctermbg=18 guibg=#282828
 "colorscheme PaperColor
 "}}}
 
+"{{{ nova theme
+"colorscheme nova
+"}}}
+
 set conceallevel=1 "Use vims new conceal feature
+set concealcursor=""
 "}}}
 
 " Settings related to text behaviour and margins

@@ -27,6 +27,14 @@ noremap <Right> <NOP>
 set hidden
 
 let g:tex_flavor="latex"
+
+" Remove line numbering in new terminals
+" https://github.com/neovim/neovim/issues/4455
+if has("nvim")
+  autocmd TermOpen term://* set nonumber
+  autocmd TermOpen term://* set norelativenumber
+endif
+
 "}}}
 
 " Backup if necessary

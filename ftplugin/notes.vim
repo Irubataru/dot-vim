@@ -6,6 +6,7 @@ set spell
 " Navigate to other notes with the \gt keybinding
 vnoremap <Leader>gt :NoteFromSelectedText<CR>
 nnoremap <Leader>gt viw:NoteFromSelectedText<CR>
+nnoremap <Leader>ff :set foldlevel=0<CR>zA
 
 " Set set a short timeout for mappings
 set timeoutlen=300

@@ -42,6 +42,15 @@ nnoremap ]oq :cclose<cr>
 " Reformat current paragraph
 nnoremap <Leader>ff gqip
 
+" More easily accessible file completion
+inoremap <C-F> <C-X><C-F>
+
+" Easier access to only
+nnoremap <Leader>o :only<cr>
+
+" Disable EX mode
+nnoremap Q <NOP>
+
 " Replace yank with flashy-yank that highlights yanked area
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
@@ -75,8 +84,8 @@ tnoremap <Esc> <C-\><C-n>
 "" {{{
 autocmd FileType c,cpp noremap <Leader>rc :YcmDiags<CR>
 autocmd FileType c,cpp noremap <Leader>gt :YcmCompleter GoTo<CR>
-autocmd FileType c,cpp noremap <Leader>gd :YcmCompleter GoToDefinition<CR>
-autocmd FileType c,cpp noremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
+"autocmd FileType c,cpp noremap <Leader>gd :YcmCompleter GoToDefinition<CR>
+"autocmd FileType c,cpp noremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
 "" }}}
 
 "" vim-clang-format
@@ -127,6 +136,7 @@ nmap <F8> :TagbarToggle<CR>
 "" {{{
 nnoremap <Leader>gg :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gd :Gdiff<CR>
 "" }}}
 
 "" hardmode
