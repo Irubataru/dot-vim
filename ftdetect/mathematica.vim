@@ -1,2 +1,2 @@
-au BufRead,BufNewFile *.m,*.nb set filetype=mma
-au BufRead,BufNewFile *.m,*.nb set syntax=mma
+au BufRead,BufNewFile *.nb set filetype=mma
+au BufRead,BufNewFile *.nb set syntax=mma

@@ -150,3 +150,14 @@ let g:indentLine_setConceal = 0
 let g:chromatica#libclang_path='/home/glesaaen/.vim/clang'
 let g:chromatica#highlight_feature_level=1
 "}}}
+
+"ale
+"{{{
+let g:ale_sign_warning = '?'
+let g:ale_sign_error = '!'
+"}}}
+
+" python-mode
+" {{{
+let g:pymode = 0
+" }}}

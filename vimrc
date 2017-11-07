@@ -71,6 +71,7 @@ Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
 " For python
 Plug 'w0rp/ale', { 'for': 'python' }
 Plug 'google/yapf', { 'for': 'python' }
+Plug 'python-mode/python-mode', { 'for': 'python' }
 
 " For LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }
@@ -95,11 +96,12 @@ Plug 'vim-scripts/gnuplot.vim'
 
 " Other filetype specific plugins
 Plug 'google/vim-ft-bzl'
-"Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 
 " nvim dependent plugins
 if has('nvim')
   Plug 'mhinz/vim-signify'
+  Plug 'skywind3000/asyncrun.vim'
+  "Plug 'neomake/neomake'
   "Plug 'arakashic/chromatica.nvim', { 'for': ['cpp'], 'do': ':UpdateRemotePlugins' }
   "Plug 'critiqjo/lldb.nvim'
 endif
