@@ -1,5 +1,7 @@
 "" - Key mappings for vim -
 
+let mapleader=" "
+
 " Navigation
 " {{{
 
@@ -29,7 +31,7 @@ noremap <C-Right> :tabn<CR>
 
 " UI Related
 " {{{
-nnoremap <space> zz
+nnoremap <Leader><Leader> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 nnoremap <Leader>rf :set foldlevel=0<CR>
 
@@ -41,6 +43,15 @@ nnoremap ]oq :cclose<cr>
 
 " Reformat current paragraph
 nnoremap <Leader>ff gqip
+
+" More easily accessible file completion
+inoremap <C-F> <C-X><C-F>
+
+" Easier access to only
+nnoremap <Leader>o :only<cr>
+
+" Disable EX mode
+nnoremap Q <NOP>
 
 " Replace yank with flashy-yank that highlights yanked area
 map y <Plug>(operator-flashy)
@@ -63,15 +74,20 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 " }}}
 
+" Terminal related
+" {{{
+tnoremap <Esc> <C-\><C-n>
+" }}}
+
 " Plugin keymaps
 " {{{
 
 "" YouCompleteMe
 "" {{{
-nmap <Leader>rc :YcmDiags<CR>
-nnoremap <Leader>gt :YcmCompleter GoTo<CR>
-nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
+autocmd FileType c,cpp noremap <Leader>rc :YcmDiags<CR>
+autocmd FileType c,cpp noremap <Leader>gt :YcmCompleter GoTo<CR>
+"autocmd FileType c,cpp noremap <Leader>gd :YcmCompleter GoToDefinition<CR>
+"autocmd FileType c,cpp noremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
 "" }}}
 
 "" vim-clang-format
@@ -122,6 +138,7 @@ nmap <F8> :TagbarToggle<CR>
 "" {{{
 nnoremap <Leader>gg :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gd :Gdiff<CR>
 "" }}}
 
 "" hardmode
@@ -150,6 +167,11 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+"" }}}
+
+"" signify
+"" {{{
+nnoremap <Leader>ss :SignifyToggle<CR>
 "" }}}
 
 "" Commands for compiling and running C++ programs

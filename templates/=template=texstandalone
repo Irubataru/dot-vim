@@ -1,14 +1,5 @@
-\documentclass[11pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp,tikz}
-
+\documentclass[11pt,tikz]{standalone}
 \usetikzlibrary{calc}
-
-\pagestyle{empty}
-\usepackage[active,tightpage]{preview}
-\PreviewEnvironment{tikzpicture}
-\setlength\PreviewBorder{2mm}
 
 \begin{document}
 

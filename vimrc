@@ -1,17 +1,21 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype plugin on
 
 " Get plugins using Plug
 call plug#begin("~/.vim/plugged")
 
 " General plugins
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-dispatch'
 Plug 'wikitopian/hardmode'
+
+if !has('nvim') 
+  Plug 'tpope/vim-sensible'
+endif 
 
 " Buffer and file-management
 Plug 'ctrlpvim/ctrlp.vim'
@@ -43,28 +47,31 @@ Plug 'guns/xterm-color-table.vim'
 Plug 'Irubataru/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/base16-vim'
+Plug 'trevordmiller/nova-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'haya14busa/vim-operator-flashy' | 
       \ Plug 'kana/vim-operator-user'
+"Plug 'Yggdroot/indentLine',                 " Display vertical bars for each indent level
+  "\ {'for': ['cpp', 'javascript', 'html']}
 Plug 'haya14busa/incsearch.vim'
-Plug 'Yggdroot/indentLine',                 " Display vertical bars for each indent level
-  \ {'for': ['cpp', 'javascript', 'html']}
 
 " For C++
 Plug 'ervandew/supertab' |
       \  Plug 'Valloric/YouCompleteMe', 
-            \{ 'for': ['cpp', 'javascript', 'c'],
-            \  'do': 'python2 install.py --clang-completer --tern-completer' }
-"Plug 'jeaye/color_coded', { 'for': ['cpp', 'hpp'], 'do': 'CC=gcc CXX=g++ cmake . && make && make install' }
+            \{ 'for': ['cpp', 'javascript', 'c', 'python'],
+            \  'do': 'python2 install.py --clang-completer' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
-"Plug 'Mizuchi/STL-Syntax', { 'for': [] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
-"Plug 'Irubataru/pyclewn', { 'for': 'cpp' }
 Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
       \ Plug 'kana/vim-operator-user'
+
+" For python
+Plug 'w0rp/ale', { 'for': 'python' }
+Plug 'google/yapf', { 'for': 'python' }
+Plug 'python-mode/python-mode', { 'for': 'python' }
 
 " For LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }
@@ -83,9 +90,20 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' }  |
       \ Plug 'nelstrom/vim-markdown-folding', { 'for': 'markdown' }
 
 " Other syntax highlighting
-Plug 'vim-scripts/matlab.vim'
+Plug 'lazywei/vim-matlab'
 Plug 'rsmenon/vim-mathematica'
 Plug 'vim-scripts/gnuplot.vim'
 
+" Other filetype specific plugins
+Plug 'google/vim-ft-bzl'
+
+" nvim dependent plugins
+if has('nvim')
+  Plug 'mhinz/vim-signify'
+  Plug 'skywind3000/asyncrun.vim'
+  "Plug 'neomake/neomake'
+  "Plug 'arakashic/chromatica.nvim', { 'for': ['cpp'], 'do': ':UpdateRemotePlugins' }
+  "Plug 'critiqjo/lldb.nvim'
+endif
 
 call plug#end()

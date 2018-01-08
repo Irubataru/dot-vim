@@ -27,21 +27,14 @@ noremap <Right> <NOP>
 set hidden
 
 let g:tex_flavor="latex"
-"}}}
 
-" Makes vim leave insert mode instantly
-"{{{
-if !has('gui-running')
-  set ttimeoutlen=10
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
+" Remove line numbering in new terminals
+" https://github.com/neovim/neovim/issues/4455
+if has("nvim")
+  autocmd TermOpen term://* set nonumber
+  autocmd TermOpen term://* set norelativenumber
 endif
 
-" Disable insert mode escape sequences
-set esckeys 
 "}}}
 
 " Backup if necessary
@@ -52,6 +45,6 @@ else
   set backup            " keep a backup file
 endif
 
-autocmd BufWinLeave *.* mkview!
-autocmd BufWinEnter *.* silent loadview
+"autocmd BufWinLeave *.* mkview!
+"autocmd BufWinEnter *.* silent loadview
 "}}}
