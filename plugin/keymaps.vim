@@ -1,5 +1,7 @@
 "" - Key mappings for vim -
 
+let mapleader=" "
+
 " Navigation
 " {{{
 
@@ -29,7 +31,7 @@ noremap <C-Right> :tabn<CR>
 
 " UI Related
 " {{{
-nnoremap <space> zz
+nnoremap <Leader><Leader> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 nnoremap <Leader>rf :set foldlevel=0<CR>
 
