@@ -1,7 +1,4 @@
-cumentclass[11pt,a4paper,dvipsnames]{beamer}
-\usepackage[usenames]{xcolor}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+cumentclass[11pt,a4paper]{beamer}
 \usepackage{listings,algpseudocode}
 \usepackage{amsmath,tikz}
 

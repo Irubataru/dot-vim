@@ -72,6 +72,7 @@ Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
 Plug 'w0rp/ale', { 'for': 'python' }
 Plug 'google/yapf', { 'for': 'python' }
 Plug 'python-mode/python-mode', { 'for': 'python' }
+Plug 'Chiel92/vim-autoformat', { 'for': ['python', 'tex'] }
 
 " For LaTeX
 Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }

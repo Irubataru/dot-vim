@@ -5,7 +5,18 @@
 " UI
 " {{{
 
-setlocal expandtab tabstop=2 shiftwidth=2
+set foldmethod=indent
+set foldnestmax=2
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
+
+let g:formatters_python = ['yapf']
 
 " }}}
 
@@ -13,6 +24,7 @@ setlocal expandtab tabstop=2 shiftwidth=2
 " {{{
 
 nnoremap <silent> <F5> :AsyncRun -raw python %<CR>
-autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+"autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+nnoremap <leader>cf :Autoformat<CR>
 
 " }}}
