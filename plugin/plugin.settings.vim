@@ -28,6 +28,9 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:ycm_autoclose_preview_window_after_insertion = 1
 "}}}
 
+"let g:CtrlSpaceIgnoredFiles = '\v(doc|devel)[\/]'
+let g:CtrlSpaceIgnoredFiles = '\v(data|doc)[\/]'
+
 "UltiSnips
 "{{{
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -88,7 +91,8 @@ let g:LatexBox_no_mappings = 1
 "vim-airline
 "{{{
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_exclude_preview = 1
+"let g:airline#extensions#tabline#enabled = 1
 "}}}
 
 "vim-fugitive

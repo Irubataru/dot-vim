@@ -4,7 +4,7 @@ set nocompatible
 filetype plugin on
 
 " Get plugins using Plug
-call plug#begin("~/.vim/plugged")
+call plug#begin("~/.vim/extensions")
 
 " General plugins
 Plug 'tpope/vim-repeat'
@@ -24,6 +24,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } |
       \ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'milkypostman/vim-togglelist'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Additional functionality
 Plug 'easymotion/vim-easymotion'

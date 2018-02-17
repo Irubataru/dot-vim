@@ -18,14 +18,14 @@ nnoremap <silent> zj :call NextClosedFold('j')<CR>
 nnoremap <silent> zk :call NextClosedFold('k')<CR>
 
 " Buffer Movement
-nnoremap <C-H> :bprevious<CR>
-nnoremap <C-L> :bnext<CR>
-nnoremap <Leader>k :BuffergatorMruCyclePrev<cr>
-nnoremap <Leader>j :BuffergatorMruCycleNext<cr>
+"nnoremap <C-H> :bprevious<CR>
+"nnoremap <C-L> :bnext<CR>
+"nnoremap <Leader>k :BuffergatorMruCyclePrev<cr>
+"nnoremap <Leader>j :BuffergatorMruCycleNext<cr>
 
 " Tab movement
-noremap <C-Left> :tabp<CR>
-noremap <C-Right> :tabn<CR>
+"noremap <C-Left> :tabp<CR>
+"noremap <C-Right> :tabn<CR>
 
 " }}}
 
@@ -86,8 +86,14 @@ tnoremap <Esc> <C-\><C-n>
 "" {{{
 autocmd FileType c,cpp noremap <Leader>rc :YcmDiags<CR>
 autocmd FileType c,cpp noremap <Leader>gt :YcmCompleter GoTo<CR>
+"let g:ycm_key_invoke_completion = '<C-S-Space>'
 "autocmd FileType c,cpp noremap <Leader>gd :YcmCompleter GoToDefinition<CR>
 "autocmd FileType c,cpp noremap <Leader>gD :YcmCompleter GoToDeclaration<CR>
+"" }}}
+
+"" Vim-CtrlSpace
+"" {{{
+let g:CtrlSpaceDefaultMappingKey = "<C-b>"
 "" }}}
 
 "" vim-clang-format
