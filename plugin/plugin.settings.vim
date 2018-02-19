@@ -128,6 +128,12 @@ let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ }
 
+" Disable the tabline for CtrlSpace
+let g:lightline.enable = {
+    \ 'statusline': 1,
+    \ 'tabline': 0
+    \ }
+
 " Need to fix lightline for CtrlSpace
 " http://genkisugimoto.com/blog/vim-ctrlspace-with-lightline/
 function! s:filtered_lightline_call(funcname)
@@ -246,9 +252,6 @@ let g:pymode = 0
 let g:goyo_width=100
 
 function! s:goyo_enter()
-  " For some reason I have to disable lightline manually
-  call lightline#disable()
-
   " Disable tmux to get a clean window
   silent !tmux set status off
   silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
@@ -260,6 +263,9 @@ function! s:goyo_enter()
 
   " Also enable Limelight
   Limelight
+
+  " For some reason I have to disable lightline manually
+  call lightline#disable()
 endfunction
 
 function! s:goyo_leave()
@@ -271,6 +277,9 @@ function! s:goyo_leave()
   set showmode
   set showcmd
   set scrolloff=5
+
+  " Re-compute the CtrlSpace tabline
+  set tabline=%!ctrlspace#api#Tabline()
 
   " Turn off Limelight
   Limelight!
