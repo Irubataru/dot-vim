@@ -43,19 +43,22 @@ Plug 'itchyny/vim-cursorword', { 'for': 'cpp' }
 Plug 'tpope/vim-fugitive'  " The best git plugin
 Plug 'airblade/vim-rooter' " Changes the vim directory to project root
 
-" Related to the look
-Plug 'guns/xterm-color-table.vim'
+" Colour schemes
+Plug 'junegunn/seoul256.vim'
 Plug 'Irubataru/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'trevordmiller/nova-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+
+" Related to the look
+Plug 'guns/xterm-color-table.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'haya14busa/vim-operator-flashy' | 
       \ Plug 'kana/vim-operator-user'
-"Plug 'Yggdroot/indentLine',                 " Display vertical bars for each indent level
-  "\ {'for': ['cpp', 'javascript', 'html']}
+Plug 'Yggdroot/indentLine', {'for': ['python']}
 Plug 'haya14busa/incsearch.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
 
 " For C++
 Plug 'ervandew/supertab' |

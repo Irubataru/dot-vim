@@ -180,6 +180,16 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 nnoremap <Leader>ss :SignifyToggle<CR>
 "" }}}
 
+"" Goyo
+"" {{{
+nnoremap <C-g> :Goyo<CR>
+"" }}}
+
+"" Limelight
+"" {{{
+nnoremap <C-l> :Limelight!!<CR>
+"" }}}
+
 "" Commands for compiling and running C++ programs
 "" {{{
 :command C :exec ":!${CXX} -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
