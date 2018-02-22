@@ -241,7 +241,7 @@ let g:ale_sign_error = '!'
 
 "}}}
 
-" python-mode
+"python-mode
 " {{{
 let g:pymode = 0
 " }}}
@@ -262,7 +262,7 @@ function! s:goyo_enter()
   set scrolloff=999
 
   " Also enable Limelight
-  Limelight
+  "Limelight
 
   " For some reason I have to disable lightline manually
   call lightline#disable()
@@ -282,10 +282,15 @@ function! s:goyo_leave()
   set tabline=%!ctrlspace#api#Tabline()
 
   " Turn off Limelight
-  Limelight!
+  "Limelight!
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
+"}}}
+
+"vim-markdown
+"{{{
+let g:vim_markdown_no_default_key_mappings = 1
 "}}}

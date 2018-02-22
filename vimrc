@@ -91,8 +91,11 @@ Plug 'Olical/vim-syntax-expand', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
 
 " For Markdown
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }  |
-      \ Plug 'nelstrom/vim-markdown-folding', { 'for': 'markdown' }
+"Plug 'tpope/vim-markdown', { 'for': 'markdown' }  |
+      "\ Plug 'nelstrom/vim-markdown-folding', { 'for': 'markdown' }
+
+Plug 'godlygeek/tabular', { 'for': 'markdown' } |
+      \ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 " Other syntax highlighting
 Plug 'lazywei/vim-matlab'
