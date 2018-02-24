@@ -20,12 +20,6 @@ nnoremap <silent> zk :call NextClosedFold('k')<CR>
 " Buffer Movement
 nnoremap <silent> <C-l> :CtrlSpaceGoDown<CR>
 nnoremap <silent> <C-h> :CtrlSpaceGoUp<CR>
-"nnoremap <Leader>k :BuffergatorMruCyclePrev<cr>
-"nnoremap <Leader>j :BuffergatorMruCycleNext<cr>
-
-" Tab movement
-"noremap <C-Left> :tabp<CR>
-"noremap <C-Right> :tabn<CR>
 
 " }}}
 
@@ -46,9 +40,6 @@ nnoremap <Leader>ff gqip
 
 " More easily accessible file completion
 inoremap <C-F> <C-X><C-F>
-
-" Easier access to only
-nnoremap <Leader>o :only<cr>
 
 " Disable EX mode
 nnoremap Q <NOP>
@@ -72,11 +63,16 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
 " }}}
 
 " Terminal related
 " {{{
-tnoremap <Esc> <C-\><C-n>
+
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+endif
+
 " }}}
 
 " Plugin keymaps
