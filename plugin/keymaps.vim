@@ -21,10 +21,19 @@ nnoremap <silent> zk :call NextClosedFold('k')<CR>
 nnoremap <silent> <C-l> :CtrlSpaceGoDown<CR>
 nnoremap <silent> <C-h> :CtrlSpaceGoUp<CR>
 
+"" File navigation
+"" {{{
+
+" Start a :e with the dir of the current buffer already filled in
+nnoremap ,e :e <C-R>=Get_Relative_Cwd() <CR>
+
+"" }}}
+
 " }}}
 
 " UI Related
 " {{{
+
 nnoremap <Leader><Leader> zz
 nnoremap <Leader>zz :let &scrolloff=810-&scrolloff<CR>
 nnoremap <Leader>rf :set foldlevel=0<CR>
@@ -94,8 +103,11 @@ let g:CtrlSpaceDefaultMappingKey = "<C-b>"
 
 "" vim-clang-format
 "" {{{
+
 autocmd FileType c,cpp nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp vnoremap <buffer><Leader>cf :ClangFormat<CR>
+autocmd FileType c,cpp vnoremap <buffer><Leader>ca :ClangFormatAutoToggle<CR>
+
 "" }}}
 
 "" NERDCommenter
@@ -199,6 +211,16 @@ nnoremap <silent> <C-y> :Limelight!!<CR>
 " Accompanying functions
 " {{{
 
+" Returns the path to the current buffer relative to your current working
+" directory
+function Get_Relative_Cwd()
+  if expand("%:p:h") == getcwd()
+    return ""
+  else
+    return substitute(expand("%:p:h"), "^" . getcwd() . "/", "", "") . "/"
+  endif
+endfunction
+
 "Simple wrapper: do quickfix cmd, center line and if taglist.vim's window is
 "open, sync, from vim.wikia.com/wiki/Search_using_quickfix_to_list_occurences
 function s:Fancy_Quickfix_Cmd(Cmd)
@@ -229,4 +251,5 @@ function! NextClosedFold(dir)
         call winrestview(view)
     endif
 endfunction
+
 " }}}
