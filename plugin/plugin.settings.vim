@@ -112,6 +112,15 @@ let g:LatexBox_no_mappings = 1
 
 "}}}
 
+"vimtex
+"{{{
+
+let g:vimtex_fold_enabled = 1
+let g:vimtex_view_method = "zathura"
+
+
+"}}}
+
 "vim-airline (DISABLED)
 "{{{
 

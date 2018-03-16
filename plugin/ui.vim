@@ -18,10 +18,12 @@ colorscheme seoul256
 
 set conceallevel=1 "Use vims new conceal feature
 set concealcursor=""
+
 "}}}
 
 " Settings related to text behaviour and margins
 "{{{
+
 set scrolloff=10      " number of lines to keep above and below cursor
 set number            " show linenumbers
 
@@ -33,24 +35,31 @@ set textwidth=80
 set wrapmargin=0
 
 set formatoptions+=l
+
 "}}}
 
 " Tabs are defined as 2 spaces
 "{{{
+
 set tabstop=2 
 set expandtab
 set shiftwidth=2
+
 "}}}
 
 " Other settings
 "{{{
+
 if has('nvim')
   set inccommand=nosplit
 endif
+
 "}}}
 
 "Settings for Powerline
 "{{{
+
 set laststatus=2
 set noshowmode
+
 "}}}

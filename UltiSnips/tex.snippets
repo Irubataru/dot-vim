@@ -4,6 +4,10 @@ snippet env "LaTeX environment"
 \end{$1}
 endsnippet
 
+snippet inc "usepackage"
+\usepackage{$1}
+endsnippet
+
 snippet co "Command"
 \\$1{${0:${VISUAL}}}
 endsnippet
@@ -62,7 +66,7 @@ snippet color "color marked text"
 {\color{${1:red}}${2:${VISUAL}}}$0
 endsnippet
 
-snippet hcomm "Header comment"
+snippet hcom "Header comment"
 % `!p snip.rv = "".join("-" for i in t[1])` %
 % ${1:Title} %
 % `!p snip.rv = "".join("-" for i in t[1])` %

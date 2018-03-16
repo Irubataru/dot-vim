@@ -63,7 +63,7 @@ Plug 'junegunn/goyo.vim'
 " For C++
 Plug 'ervandew/supertab' |
       \  Plug 'Valloric/YouCompleteMe', 
-            \{ 'for': ['cpp', 'javascript', 'c', 'python'],
+            \{ 'for': ['cpp', 'javascript', 'c', 'python', 'tex'],
             \  'do': 'python2 install.py --clang-completer' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
@@ -79,10 +79,7 @@ Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'Chiel92/vim-autoformat', { 'for': ['python', 'tex'] }
 
 " For LaTeX
-Plug 'LaTeX-Box-Team/LaTeX-Box', { 'for': 'tex' }
-Plug 'Irubataru/latex-greek-letters', { 'for': 'tex' }
-Plug 'kana/vim-textobj-user', { 'for': 'tex' } |
-      \ Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
+Plug 'lervag/vimtex', { 'for': 'tex' }
 
 " For JavaScript
 Plug 'marijnh/tern_for_vim', { 'for': [], 'do': 'npm install' }
