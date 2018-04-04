@@ -2,4 +2,4 @@
 " markdown specific settings "
 " -------------------------- "
 
-set conceallevel=2
+setlocal conceallevel=2
