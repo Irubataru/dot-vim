@@ -233,5 +233,28 @@ snippet fieldset "Fieldset" w
 </fieldset>
 endsnippet
 
+#####################
+# Luquid constructs #
+#####################
+
+snippet lcomment "Liquid comment" w
+{% comment %} $0 {% endcomment %}
+endsnippet
+
+snippet lif "Liquid if" w
+{% if $1 %}
+	$0
+{% endif %}
+endsnippet
+
+snippet lfor "Liquid for" w
+{% for $1 in $2 %}
+	$0
+{% endfor %}
+endsnippet
+
+snippet lurl "Liquid relative url" w
+{{ '$1' | relative_url }}$0
+endsnippet
 
 # vim:ft=snippets:
