@@ -6,6 +6,8 @@ filetype plugin on
 " Get plugins using Plug
 call plug#begin("~/.vim/extensions")
 
+Plug 'semanser/vim-outdated-plugins', { 'for': [] }
+
 " General plugins
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -38,6 +40,7 @@ Plug 'aperezdc/vim-template', { 'on': 'Template' }
 Plug 'embear/vim-localvimrc'
 Plug 'vim-scripts/TaskList.vim'
 Plug 'itchyny/vim-cursorword', { 'for': 'cpp' }
+Plug 'junegunn/vim-easy-align'
 
 " git related
 Plug 'tpope/vim-fugitive'  " The best git plugin
@@ -64,13 +67,14 @@ Plug 'junegunn/goyo.vim'
 Plug 'ervandew/supertab' |
       \  Plug 'Valloric/YouCompleteMe', 
             \{ 'for': ['cpp', 'javascript', 'c', 'python', 'tex'],
-            \  'do': 'python2 install.py --clang-completer' }
+            \  'do': 'python3 install.py --clang-completer' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
 Plug 'majutsushi/tagbar', {'for': 'cpp'}
 Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
       \ Plug 'kana/vim-operator-user'
+Plug 'vim-syntastic/syntastic', { 'for': [''] }
 
 " For python
 Plug 'w0rp/ale', { 'for': 'python' }
@@ -86,10 +90,6 @@ Plug 'marijnh/tern_for_vim', { 'for': [], 'do': 'npm install' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'Olical/vim-syntax-expand', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
-
-" For Markdown
-"Plug 'tpope/vim-markdown', { 'for': 'markdown' }  |
-      "\ Plug 'nelstrom/vim-markdown-folding', { 'for': 'markdown' }
 
 Plug 'godlygeek/tabular', { 'for': 'markdown' } |
       \ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
