@@ -1,7 +1,7 @@
 
 /*
  * Created: %DAY%-%MONTH%-%YEAR%
- * Author: Jonas R. Glesaaen (jonas@glesaaen.com)
+ * Copyright (c) <%YEAR%> <Jonas R. Glesaaen (jonas@glesaaen.com)>
  */
 
 #include <gtest/gtest.h>
