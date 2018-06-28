@@ -130,15 +130,11 @@ map <C-N> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "" }}}
 
-"" CtrlP
+"" fzf
 "" {{{
-"" Use a leader instead of the actual named binding
-nmap <silent> <leader>p :CtrlP<cr>
 
-"" Easy bindings for its various modes
-nmap <silent> <leader>bb :CtrlPBuffer<cr>
-nmap <silent> <leader>bm :CtrlPMixed<cr>
-nmap <silent> <leader>bs :CtrlPMRU<cr>
+nnoremap <C-p> :<C-u>FZF<CR>
+
 "" }}}
 
 "" vim-buffergator
