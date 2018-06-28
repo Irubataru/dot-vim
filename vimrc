@@ -20,7 +20,8 @@ if !has('nvim')
 endif 
 
 " Buffer and file-management
-Plug 'junegunn/fzf', {'do': './install --bin'}
+Plug 'junegunn/fzf', {'do': './install --all'}
+Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } | 
       \ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }

@@ -5,13 +5,6 @@ let mapleader=" "
 " Navigation
 " {{{
 
-" Line movement
-map <Leader><Leader>/ <Plug>(easymotion-sn)
-map <Leader><Leader>l <Plug>(easymotion-lineforward)
-map <Leader><Leader>j <Plug>(easymotion-j)
-map <Leader><Leader>k <Plug>(easymotion-k)
-map <Leader><Leader>h <Plug>(easymotion-linebackward)
-
 " Fold movement
 "" Replace the zj zk calls to move to next closed fold
 nnoremap <silent> zj :call NextClosedFold('j')<CR>
@@ -43,12 +36,6 @@ nnoremap <Leader>rf :set foldlevel=0<CR>
 nnoremap <script> <silent> coq :call ToggleQuickfixList()<cr>
 nnoremap [oq :copen<cr>
 nnoremap ]oq :cclose<cr>
-
-" Reformat current paragraph
-nnoremap <Leader>ff gqip
-
-" More easily accessible file completion
-inoremap <C-F> <C-X><C-F>
 
 " Disable EX mode
 nnoremap Q <NOP>
@@ -133,7 +120,23 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "" fzf
 "" {{{
 
-nnoremap <C-p> :<C-u>FZF<CR>
+" Access to fzf functionality
+nnoremap <c-p> :Files<cr>
+nnoremap <leader>fh :Helptags<cr>
+nnoremap <leader>f/ :History/<cr>
+nnoremap <leader>f: :History:<cr>
+nnoremap <leader>fb :Buffers<cr>
+nnoremap <leader>fl :Lines<cr>
+nnoremap <leader>fL :BLines<cr>
+nnoremap <leader>fg :Commits<cr>
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" More easily accessible file completion
+imap <c-f> <plug>(fzf-complete-path)
 
 "" }}}
 
