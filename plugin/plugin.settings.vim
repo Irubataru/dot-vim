@@ -304,3 +304,8 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "{{{
 let g:vim_markdown_no_default_key_mappings = 1
 "}}}
+
+" SimplyFold
+" {{{
+let g:SimpylFold_docstring_preview = 1
+" }}}

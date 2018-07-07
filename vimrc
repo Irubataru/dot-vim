@@ -82,6 +82,7 @@ Plug 'w0rp/ale', { 'for': 'python' }
 Plug 'google/yapf', { 'for': 'python' }
 Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'Chiel92/vim-autoformat', { 'for': ['python', 'tex'] }
+Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 
 " For LaTeX
 Plug 'lervag/vimtex', { 'for': 'tex' }
