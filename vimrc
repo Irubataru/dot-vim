@@ -81,7 +81,7 @@ Plug 'vim-syntastic/syntastic', { 'for': [''] }
 Plug 'w0rp/ale', { 'for': 'python' }
 Plug 'google/yapf', { 'for': 'python' }
 Plug 'python-mode/python-mode', { 'for': 'python' }
-Plug 'Chiel92/vim-autoformat', { 'for': ['python', 'tex'] }
+Plug 'Chiel92/vim-autoformat', { 'for': ['python', 'tex', 'html', 'css', 'javascript'] }
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 
 " For LaTeX

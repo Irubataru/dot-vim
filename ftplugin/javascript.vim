@@ -1,3 +1,17 @@
+" ---------------------------- "
+" javascript specific settings "
+" ---------------------------- "
+
+" General settings
+" {{{
+setlocal foldmethod=syntax
+" }}}
+
+" Keymaps
+" {{{
+nnoremap <leader>cf :Autoformat<CR>
+" }}}
+
 " Various javascript conceals
 "{{{
 let g:javascript_conceal_function   = "ƒ"
