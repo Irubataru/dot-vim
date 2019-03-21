@@ -77,9 +77,6 @@ Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
 Plug 'vim-syntastic/syntastic', { 'for': [''] }
 
 " For python
-"Plug 'w0rp/ale', { 'for': 'python' }
-"Plug 'google/yapf', { 'for': 'python' }
-"Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'Chiel92/vim-autoformat', { 'for': ['python', 'tex', 'html', 'css', 'javascript'] }
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 
@@ -108,9 +105,6 @@ if has('nvim')
   Plug 'mhinz/vim-signify'
   Plug 'skywind3000/asyncrun.vim'
   Plug 'jalvesaq/Nvim-R'
-  "Plug 'neomake/neomake'
-  "Plug 'arakashic/chromatica.nvim', { 'for': ['cpp'], 'do': ':UpdateRemotePlugins' }
-  "Plug 'critiqjo/lldb.nvim'
 endif
 
 call plug#end()

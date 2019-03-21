@@ -1,34 +1,6 @@
 "
 "" - Plugin settings/options for vim -
 "
-"YouCompleteMe (DISABLED)
-"{{{
-
-"let g:ycm_min_num_of_chars_for_completion = 2;
-"let g:ycm_complete_in_strings = 0
-"let g:ycm_warning_symbol = '?'
-"let g:ycm_error_symbol = '!'
-"let g:ycm_confirm_extra_conf = 0
-"let g:ycm_filetype_blacklist = {
-      "\ 'tagbar' : 1,
-      "\ 'qf' : 1,
-      "\ 'notes' : 1,
-      "\ 'markdown' : 1,
-      "\ 'unite' : 1,
-      "\ 'text' : 1,
-      "\ 'vimwiki' : 1,
-      "\ 'pandoc' : 1,
-      "\ 'infolog' : 1,
-      "\ 'mail' : 1,
-      "\ 'tex' : 1
-      "\}
-""make YCM compatible with UltiSnips (http://stackoverflow.com/a/22253548/2874210)
-"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-"let g:ycm_autoclose_preview_window_after_insertion = 1
-"let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_conf.py'
-
-"}}}
 
 "coc.nvim
 "{{{
@@ -161,34 +133,10 @@ let g:UltiSnipsEditSplit="vertical"
 
 "}}}
 
-"supertab (DISABLED)
-"{{{
-
-"let g:SuperTabDefaultCompletionType = '<C-n>'
-
-"}}}
-
 "vim-cpp-enhanced-highlight
 "{{{
 
 let g:cpp_experimental_template_highlight = 1
-
-"}}}
-
-"CtrlP
-"{{{
-
-" Setup some default ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-\}
-
-" Use the nearest .git directory as the cwd
-let g:ctrlp_working_path_mode = 'r'
-
-" Keymaps
-nnoremap <Leader>p :CtrlP<CR>
 
 "}}}
 
@@ -228,15 +176,6 @@ let g:LatexBox_no_mappings = 1
 let g:vimtex_fold_enabled = 1
 let g:vimtex_view_method = "zathura"
 
-
-"}}}
-
-"vim-airline (DISABLED)
-"{{{
-
-"let g:airline_powerline_fonts = 1
-"let g:airline_exclude_preview = 1
-"let g:airline#extensions#tabline#enabled = 1
 
 "}}}
 
@@ -287,10 +226,10 @@ endif
 
 "}}}
 
-"vim-notes
+"vim-notes (DISABLED)
 "{{{
 
-let g:notes_directories = ['~/Dropbox/.vim.notes']
+"let g:notes_directories = ['~/Dropbox/.vim.notes']
 
 "}}}
 
@@ -350,29 +289,6 @@ let g:indentLine_enabled = 1
 let g:indentLine_setConceal = 0
 
 "}}}
-
-"chromatica.nvim (DISABLED)
-"{{{
-
-"let g:chromatica#libclang_path='/home/glesaaen/.vim/clang'
-"let g:chromatica#highlight_feature_level=1
-
-"}}}
-
-"ale (DISABLED)
-"{{{
-
-"let g:ale_sign_warning = '?'
-"let g:ale_sign_error = '!'
-
-"}}}
-
-"python-mode (DISABLED)
-" {{{
-
-"let g:pymode = 0
-
-" }}}
 
 "GoYo / Limelight
 "{{{
