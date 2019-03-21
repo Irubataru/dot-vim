@@ -29,13 +29,16 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'milkypostman/vim-togglelist'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 
+" Auto-completion
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'SirVer/ultisnips'
+
 " Additional functionality
 Plug 'easymotion/vim-easymotion'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'freitass/todo.txt-vim'
-Plug 'SirVer/ultisnips'
-Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes'
+"Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes' " Disabled due to conflict with coc
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'aperezdc/vim-template', { 'on': 'Template' }
 Plug 'embear/vim-localvimrc'
@@ -65,10 +68,6 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
 
 " For C++
-Plug 'ervandew/supertab' |
-      \  Plug 'Valloric/YouCompleteMe', 
-            \{ 'for': ['cpp', 'javascript', 'c', 'python', 'tex'],
-            \  'do': 'python3 install.py --clang-completer' }
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
 Plug 'rdnetto/YCM-Generator', { 'for': 'cpp', 'branch': 'stable'}
 Plug 'drmikehenry/vim-headerguard', {'for': ['cpp', 'hpp'] }
@@ -78,9 +77,9 @@ Plug 'rhysd/vim-clang-format', { 'for': ['cpp', 'hpp', 'c'] } |
 Plug 'vim-syntastic/syntastic', { 'for': [''] }
 
 " For python
-Plug 'w0rp/ale', { 'for': 'python' }
-Plug 'google/yapf', { 'for': 'python' }
-Plug 'python-mode/python-mode', { 'for': 'python' }
+"Plug 'w0rp/ale', { 'for': 'python' }
+"Plug 'google/yapf', { 'for': 'python' }
+"Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'Chiel92/vim-autoformat', { 'for': ['python', 'tex', 'html', 'css', 'javascript'] }
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 
@@ -108,6 +107,7 @@ Plug 'google/vim-ft-bzl'
 if has('nvim')
   Plug 'mhinz/vim-signify'
   Plug 'skywind3000/asyncrun.vim'
+  Plug 'jalvesaq/Nvim-R'
   "Plug 'neomake/neomake'
   "Plug 'arakashic/chromatica.nvim', { 'for': ['cpp'], 'do': ':UpdateRemotePlugins' }
   "Plug 'critiqjo/lldb.nvim'

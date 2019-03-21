@@ -14,6 +14,13 @@ set t_ut= "Fix for bg colour issues in tmux http://sunaku.github.io/vim-256color
 
 "{{{ seoul
 colorscheme seoul256
+"colorscheme wombat
+"hi link CocFloating Folded
+"hi link CocErrorFloat Folded
+"hi link CocWarningFloat Folded
+"hi link CocInfoFloat Folded
+"hi link CocHintFloat Folded
+
 "}}}
 
 set conceallevel=1 "Use vims new conceal feature
