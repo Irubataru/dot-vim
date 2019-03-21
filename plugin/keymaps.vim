@@ -10,9 +10,13 @@ let mapleader=" "
 nnoremap <silent> zj :call NextClosedFold('j')<CR>
 nnoremap <silent> zk :call NextClosedFold('k')<CR>
 
-" Buffer Movement
+" Buffer movement
 nnoremap <silent> <C-l> :CtrlSpaceGoDown<CR>
 nnoremap <silent> <C-h> :CtrlSpaceGoUp<CR>
+
+" Tab movement
+nnoremap <C-Left> :tabp<CR>
+nnoremap <C-Right> :tabn<CR>
 
 "" File navigation
 "" {{{
