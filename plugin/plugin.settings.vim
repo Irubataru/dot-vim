@@ -91,6 +91,16 @@ command! -nargs=0 Format :call CocAction('format')
 " Use `:Fold` for fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
+" Coc extensions
+let g:coc_global_extensions = [
+      \ 'coc-snippets',
+      \ 'coc-css',
+      \ 'coc-html',
+      \ 'coc-json',
+      \ 'coc-pyls',
+      \ 'coc-vimtex',
+      \ ]
+
 "" Using CocList
 "" Show all diagnostics
 "nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
