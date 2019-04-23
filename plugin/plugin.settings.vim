@@ -93,12 +93,12 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Coc extensions
 let g:coc_global_extensions = [
-      \ 'coc-snippets',
       \ 'coc-css',
       \ 'coc-html',
       \ 'coc-json',
       \ 'coc-pyls',
       \ 'coc-vimtex',
+      \ 'coc-ultisnips'
       \ ]
 
 "" Using CocList
