@@ -99,6 +99,7 @@ Plug 'vim-scripts/gnuplot.vim'
 
 " Other filetype specific plugins
 Plug 'google/vim-ft-bzl'
+Plug 'vifm/vifm', { 'rtp': 'data/vim' }
 
 " nvim dependent plugins
 if has('nvim')
