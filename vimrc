@@ -30,7 +30,7 @@ Plug 'milkypostman/vim-togglelist'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Auto-completion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'SirVer/ultisnips'
 
 " Additional functionality
@@ -66,6 +66,7 @@ Plug 'Yggdroot/indentLine', {'for': ['python']}
 Plug 'haya14busa/incsearch.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'mhinz/vim-startify'
 
 " For C++
 Plug 'octol/vim-cpp-enhanced-highlight', {'for': ['cpp'] }
