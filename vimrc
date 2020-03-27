@@ -30,7 +30,7 @@ Plug 'milkypostman/vim-togglelist'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Auto-completion
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 
 " Additional functionality

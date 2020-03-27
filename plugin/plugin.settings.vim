@@ -209,22 +209,6 @@ let g:lightline.enable = {
     \ 'tabline': 0
     \ }
 
-" Need to fix lightline for CtrlSpace
-" http://genkisugimoto.com/blog/vim-ctrlspace-with-lightline/
-function! s:filtered_lightline_call(funcname)
-  if bufname('%') == '__CS__'
-    return
-  endif
-  execute 'call lightline#' . a:funcname . '()'
-endfunction
-
-augroup LightLine
-  autocmd!
-  autocmd WinEnter,BufWinEnter,FileType,ColorScheme * call s:filtered_lightline_call('update')
-  autocmd ColorScheme,SessionLoadPost * call s:filtered_lightline_call('highlight')
-  autocmd CursorMoved,BufUnload * call s:filtered_lightline_call('update_once')
-augroup END
-
 "}}}
 
 "vim-fugitive

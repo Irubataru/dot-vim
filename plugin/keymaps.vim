@@ -162,7 +162,7 @@ nmap <F8> :TagbarToggle<CR>
 
 "" fugitive.vim
 "" {{{
-nnoremap <silent> <Leader>gg :aboveleft 16Gstatus<CR>
+nnoremap <silent> <Leader>gg :aboveleft 16split\|0Git<CR>
 nnoremap <silent> <Leader>gc :Gcommit<CR>
 nnoremap <silent> <Leader>gd :Gdiff<CR>
 "" }}}
