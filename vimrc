@@ -90,8 +90,8 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'Olical/vim-syntax-expand', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
 
-Plug 'godlygeek/tabular', { 'for': 'markdown' } |
-      \ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+" For Markdown
+Plug 'https://github.com/SidOfc/mkdx', { 'for': 'markdown' }
 
 " Other syntax highlighting
 Plug 'lazywei/vim-matlab'
