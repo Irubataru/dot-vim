@@ -96,7 +96,7 @@ let g:coc_global_extensions = [
       \ 'coc-css',
       \ 'coc-html',
       \ 'coc-json',
-      \ 'coc-pyls',
+      \ 'coc-python',
       \ 'coc-vimtex',
       \ 'coc-ultisnips'
       \ ]
