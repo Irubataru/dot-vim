@@ -38,13 +38,16 @@ Plug 'easymotion/vim-easymotion'
 Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'freitass/todo.txt-vim'
-"Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes' " Disabled due to conflict with coc
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'aperezdc/vim-template', { 'on': 'Template' }
 Plug 'embear/vim-localvimrc'
 Plug 'vim-scripts/TaskList.vim'
-Plug 'itchyny/vim-cursorword', { 'for': 'cpp' }
+Plug 'itchyny/vim-cursorword', { 'on': [] }
 Plug 'junegunn/vim-easy-align'
+
+" Note taking
+Plug 'vimwiki/vimwiki', {'branch': 'dev'}
+"Plug 'xolox/vim-misc' | Plug 'xolox/vim-notes' " Disabled due to conflict with coc
 
 " git related
 Plug 'tpope/vim-fugitive'  " The best git plugin
@@ -81,6 +84,13 @@ Plug 'vim-syntastic/syntastic', { 'for': [''] }
 Plug 'Chiel92/vim-autoformat', { 'for': ['python', 'tex', 'html', 'css', 'javascript'] }
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 
+" For Clojure
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
+Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
+Plug 'venantius/vim-cljfmt', { 'for': 'clojure' }
+
 " For LaTeX
 Plug 'lervag/vimtex', { 'for': 'tex' }
 
@@ -91,7 +101,7 @@ Plug 'Olical/vim-syntax-expand', { 'for': 'javascript' }
 Plug 'elzr/vim-json', { 'for': 'json' }
 
 " For Markdown
-Plug 'https://github.com/SidOfc/mkdx', { 'for': 'markdown' }
+Plug 'SidOfc/mkdx', { 'for': 'markdown' }
 
 " Other syntax highlighting
 Plug 'lazywei/vim-matlab'

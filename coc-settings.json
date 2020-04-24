@@ -1,16 +1,5 @@
 {
-  "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": [ "c", "cpp", "cuda", "objc", "objcpp" ],
-      "rootPatterns": [ ".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/" ],
-      "initializationOptions": {
-        "cache": {
-          "directory": ".ccls-cache"
-        }
-      }
-    }
-  },
   "coc.preferences.formatOnSaveFiletypes": ["python"],
-  "python.formatting.provider": "yapf"
+  "python.formatting.provider": "yapf",
+  "python.jediEnabled": false
 }
