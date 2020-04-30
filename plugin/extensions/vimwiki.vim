@@ -3,6 +3,8 @@ let s:plugin_name = 'vimwiki'
 let g:vimwiki_list = [{'path': '~/Notes/', 'auto_toc': 1}]
 let g:vimwiki_hl_headers = 1
 let g:vimwiki_folding = 'expr'
+let g:vimwiki_global_ext = 0
+let g:vimwiki_filetypes = [ ]
 
 " Disable certain mappings
 " table_mappings: These use <TAB> and <S-TAB> which conflicts with coc
