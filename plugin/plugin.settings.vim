@@ -31,33 +31,11 @@ let g:cpp_experimental_template_highlight = 1
 
 "}}}
 
-"vim-buffergator
-"{{{
-
-" Use the right side of the screen
-let g:buffergator_viewport_split_policy = 'R'
-
-" I want my own keymappings...
-let g:buffergator_suppress_keymaps = 1
-
-"}}}
-
 "vim-template
 "{{{
 
 let g:templates_no_autocmd = 1
 let g:templates_directory = "$HOME/.vim/templates"
-
-"}}}
-
-"LaTeX-Box
-"{{{
-
-let g:LatexBox_latexmk_async = 1
-let g:LatexBox_Folding = 1
-let g:LatexBox_fold_automatic = 0
-let g:LatexBox_quickfix = 2
-let g:LatexBox_no_mappings = 1
 
 "}}}
 
@@ -101,24 +79,10 @@ endif
 
 "}}}
 
-"vim-notes (DISABLED)
-"{{{
-
-"let g:notes_directories = ['~/Dropbox/.vim.notes']
-
-"}}}
-
 "vim-session
 "{{{
 
 let g:session_autosave = 'no'
-
-"}}}
-
-"vim-bookmarks
-"{{{
-
-let g:bookmark_no_default_key_mappings = 1
 
 "}}}
 
@@ -127,13 +91,6 @@ let g:bookmark_no_default_key_mappings = 1
 
 let g:localvimrc_ask = 0
 let g:localvimrc_sandbox = 0
-
-"}}}
-
-"vim-togglelist
-"{{{
-
-let g:toggle_list_no_mappings = 1
 
 "}}}
 
@@ -209,12 +166,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 "}}}
 
-"vim-markdown
-"{{{
-let g:vim_markdown_no_default_key_mappings = 1
-"}}}
-
-" SimplyFold
+" SimpylFold
 " {{{
 let g:SimpylFold_docstring_preview = 1
 " }}}

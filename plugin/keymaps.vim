@@ -198,20 +198,9 @@ imap <c-f> <plug>(fzf-complete-path)
 
 "" }}}
 
-"" vim-buffergator
-"" {{{
-"" View the entire list of buffers open
-nnoremap <silent> <Leader>bl :BuffergatorOpen<cr>
-"" }}}
-
 "" Gundo
 "" {{{
 nnoremap <silent> <Leader>uu :GundoToggle<CR>
-"" }}}
-
-"" tagbar
-"" {{{
-nmap <F8> :TagbarToggle<CR>
 "" }}}
 
 "" fugitive.vim
@@ -219,16 +208,6 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <Leader>gg :aboveleft 16split\|0Git<CR>
 nnoremap <silent> <Leader>gc :Gcommit<CR>
 nnoremap <silent> <Leader>gd :Gdiff<CR>
-"" }}}
-
-"" hardmode
-"" {{{
-noremap <Leader>H <Esc>:call ToggleHardMode()<CR>
-"" }}}
-
-"" TaskList
-"" {{{
-map <Leader>tt <Plug>TaskList
 "" }}}
 
 "" vim-easymotion

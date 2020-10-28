@@ -26,6 +26,9 @@ noremap <Right> <NOP>
 " Make it so I can switch buffers even if they have changed
 set hidden
 
+" Timeoutlen is used for e.g. the which-key plugin (default value 1000 ms)
+set timeoutlen=500
+
 let g:tex_flavor="latex"
 
 " Remove line numbering in new terminals
