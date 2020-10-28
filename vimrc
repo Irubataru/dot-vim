@@ -93,6 +93,7 @@ Plug 'venantius/vim-cljfmt', { 'for': 'clojure' }
 
 " For LaTeX
 Plug 'lervag/vimtex', { 'for': 'tex' }
+Plug 'KeitaNakamura/tex-conceal.vim', { 'for': 'tex' }
 
 " For JavaScript
 Plug 'marijnh/tern_for_vim', { 'for': [], 'do': 'npm install' }
@@ -107,6 +108,7 @@ Plug 'SidOfc/mkdx', { 'for': 'markdown' }
 Plug 'lazywei/vim-matlab'
 Plug 'rsmenon/vim-mathematica'
 Plug 'vim-scripts/gnuplot.vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 " Other filetype specific plugins
 Plug 'google/vim-ft-bzl'

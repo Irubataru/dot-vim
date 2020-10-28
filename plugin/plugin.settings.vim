@@ -66,7 +66,7 @@ let g:LatexBox_no_mappings = 1
 
 let g:vimtex_fold_enabled = 1
 let g:vimtex_view_method = "zathura"
-
+let g:tex_conceal="abdgm"
 
 "}}}
 
