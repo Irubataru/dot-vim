@@ -41,7 +41,8 @@ let g:coc_global_extensions = [
       \ 'coc-python',
       \ 'coc-vimtex',
       \ 'coc-ultisnips',
-      \ 'coc-marketplace'
+      \ 'coc-marketplace',
+      \ 'coc-git'
       \ ]
 
 "" Using CocList

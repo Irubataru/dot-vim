@@ -37,6 +37,7 @@ Plug 'aperezdc/vim-template', { 'on': 'Template' } " Simple templates plugin for
 Plug 'embear/vim-localvimrc' " Search local vimrc files ('.lvimrc') in the tree (root dir up to current dir) and load them.
 Plug 'junegunn/vim-easy-align' " A Vim alignment plugin
 Plug 'unblevable/quick-scope' " Highlighting for f,F,t,T
+Plug 'skywind3000/vim-terminal-help' " Small changes make vim/nvim's internal terminal great again
 
 " Note taking
 Plug 'vimwiki/vimwiki', {'branch': 'dev'} " Pesonalized wiki and note taking
