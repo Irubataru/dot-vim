@@ -135,10 +135,11 @@ function! s:goyo_enter()
   " No vim info either
   set noshowmode
   set noshowcmd
-  set scrolloff=999
+  set signcolumn=no
+  "set scrolloff=999
 
   " Also enable Limelight
-  "Limelight
+  Limelight
 
   " For some reason I have to disable lightline manually
   call lightline#disable()
@@ -152,13 +153,14 @@ function! s:goyo_leave()
   " Re-enable vim info
   set showmode
   set showcmd
-  set scrolloff=5
+  set signcolumn=yes
+  "set scrolloff=5
 
   " Re-compute the CtrlSpace tabline
   set tabline=%!ctrlspace#api#Tabline()
 
   " Turn off Limelight
-  "Limelight!
+  Limelight!
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()

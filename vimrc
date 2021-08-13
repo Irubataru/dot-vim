@@ -109,6 +109,7 @@ if has('nvim')
   Plug 'mhinz/vim-signify' " Show a diff using Vim its sign column
   Plug 'skywind3000/asyncrun.vim' " Run Async Shell Commands in Vim 8.0 / NeoVim and Output to the Quickfix Window
   Plug 'jalvesaq/Nvim-R' " Vim plugin to work with R
+  Plug 'tversteeg/registers.nvim' " NeoVim plugin to preview the contents of the registers
 endif
 
 call plug#end()
