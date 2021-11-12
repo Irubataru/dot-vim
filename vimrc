@@ -38,6 +38,7 @@ Plug 'embear/vim-localvimrc' " Search local vimrc files ('.lvimrc') in the tree 
 Plug 'junegunn/vim-easy-align' " A Vim alignment plugin
 Plug 'unblevable/quick-scope' " Highlighting for f,F,t,T
 Plug 'skywind3000/vim-terminal-help' " Small changes make vim/nvim's internal terminal great again
+Plug 'AndrewRadev/linediff.vim' " A vim plugin to perform diffs on blocks of code
 
 " Note taking
 Plug 'vimwiki/vimwiki', {'branch': 'dev'} " Pesonalized wiki and note taking

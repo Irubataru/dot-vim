@@ -243,6 +243,12 @@ nnoremap <silent> <C-g> :Goyo<CR>
 nnoremap <silent> <C-y> :Limelight!!<CR>
 "" }}}
 
+"" Linediff
+"" {{{
+vnoremap <silent> <leader>da :Linediff<CR>
+nnoremap <silent> <leader>dr :LinediffReset<CR>
+"" }}}
+
 "" Commands for compiling and running C++ programs
 "" {{{
 :command C :exec ":!${CXX} -g ${CFLAGS} " .expand("%") "-o " .substitute(expand("%"),".cpp",".out","g")
