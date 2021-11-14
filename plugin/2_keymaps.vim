@@ -110,11 +110,11 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"inoremap <silent><expr> <TAB>
+      "\ pumvisible() ? "\<C-n>" :
+      "\ <SID>check_back_space() ? "\<TAB>" :
+      "\ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -150,11 +150,6 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 "" }}}
 
-"" Vim-CtrlSpace
-"" {{{
-let g:CtrlSpaceDefaultMappingKey = "<C-b>"
-"" }}}
-
 "" vim-clang-format
 "" {{{
 
@@ -175,57 +170,11 @@ map <C-N> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "" }}}
 
-"" fzf
-"" {{{
-
-" Access to fzf functionality
-nnoremap <c-p> :Files<cr>
-nnoremap <leader>fh :Helptags<cr>
-nnoremap <leader>f/ :History/<cr>
-nnoremap <leader>f: :History:<cr>
-nnoremap <leader>fb :Buffers<cr>
-nnoremap <leader>fl :Lines<cr>
-nnoremap <leader>fL :BLines<cr>
-nnoremap <leader>fg :Commits<cr>
-
-" Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
-
-" More easily accessible file completion
-imap <c-f> <plug>(fzf-complete-path)
-
-"" }}}
-
-"" Gundo
-"" {{{
-nnoremap <silent> <Leader>uu :GundoToggle<CR>
-"" }}}
-
 "" fugitive.vim
 "" {{{
 nnoremap <silent> <Leader>gg :aboveleft 16split\|0Git<CR>
 nnoremap <silent> <Leader>gc :Gcommit<CR>
 nnoremap <silent> <Leader>gd :Gdiff<CR>
-"" }}}
-
-"" vim-easymotion
-"" {{{
-"<Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
-
-" Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
 "" }}}
 
 "" signify

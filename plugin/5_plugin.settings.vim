@@ -2,18 +2,6 @@
 "" - Plugin settings/options for vim -
 "
 
-"CtrlSpace
-"{{{
-
-"let g:CtrlSpaceIgnoredFiles = '\v(doc|devel)[\/]'
-let g:CtrlSpaceIgnoredFiles = '\v(data|doc)[\/]'
-
-if executable("ag")
-    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-endif
-
-"}}}
-
 "UltiSnips
 "{{{
 
