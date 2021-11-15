@@ -69,16 +69,20 @@ return require('packer').startup(function(use)
   use 'tversteeg/registers.nvim' -- NeoVim plugin to preview the contents of the registers
 
   -- LSP
-  use { 'neovim/nvim-lspconfig', config = configs.lspconfig }
-  use 'williamboman/nvim-lsp-installer'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-nvim-lua'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use { 'hrsh7th/nvim-cmp', config = configs.cmp }
-  use { 'L3MON4D3/LuaSnip', config = configs.luasnip }
+  use { 'neovim/nvim-lspconfig', config = configs.lspconfig } -- Quickstart configurations for the Nvim LSP client
+  use 'williamboman/nvim-lsp-installer' -- Companion plugin for nvim-lspconfig that allows you to seamlessly manage LSP servers locally with :LspInstall. With full Windows support!
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim builtin LSP client
+  use 'hrsh7th/cmp-nvim-lua' -- nvim-cmp source for nvim lua
+  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-path' -- nvim-cmp source for path
+  use 'hrsh7th/cmp-cmdline' -- nvim-cmp source for vim's cmdline
+  use 'onsails/lspkind-nvim' -- vscode-like pictograms for neovim lsp completion items
+  use { 'hrsh7th/nvim-cmp', config = configs.cmp } -- A completion plugin for neovim coded in Lua.tr
+  use { 'L3MON4D3/LuaSnip', config = configs.luasnip } -- Snippet Engine for Neovim written in Lua.
+
+  -- TODO Find out what this is, also include in cmp config
+   use { 'tzachar/cmp-tabnine', run = './install.sh' } -- TabNine plugin for hrsh7th/nvim-cmp
+
 
   -- Tree sitter
   use 'nvim-treesitter/nvim-treesitter'
