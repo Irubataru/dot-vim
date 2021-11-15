@@ -2,4 +2,4 @@
 -- xml specific settings --
 ---------------------------
 
-vim.bo.foldmethod = "indent"
+vim.wo.foldmethod = "indent"

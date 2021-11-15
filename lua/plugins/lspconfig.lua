@@ -49,23 +49,15 @@ lspconfig.sumneko_lua.setup({
   },
   on_attach = on_attach,
   filetypes = {'lua', 'lua.luapad', 'luapad'},
-  settings = {
-    Lua = {
-      runtime = {
-        path = vim.split(package.path, ';'), },
-        workspace = {
-          library = {
-            [vim.fn.expand("$VIMRUNTIME/lua")] = true, -- add as many lib you want
-            },
-          },
-        diagnostics= {
-          enable= true,
-          globals= { "vim", },
-          disable= { "lowercase-global" }
-      }
-    }
-  }
 })
 
 -- Setup C/C++ LSP
 lspconfig.clangd.setup{}
+
+-- Setup C#
+local pid = vim.fn.getpid()
+local omnisharp_bin = "/home/glesaaen/Downloads/omnisharp-linux-x64/run"
+lspconfig.omnisharp.setup{
+    cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) },
+    filetypes = { 'cs', 'vb' }
+}
