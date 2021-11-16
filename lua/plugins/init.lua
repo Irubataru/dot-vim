@@ -25,6 +25,7 @@ local configs = {
   telescope = function() require('plugins/telescope') end,
   template = function() require('plugins/template') end,
   terminal_help = function() require('plugins/terminal-help') end,
+  treesitter = function() require('plugins/treesitter') end,
   vimtex = function() require('plugins/vimtex') end,
   vimwiki = function() require('plugins/vimwiki') end,
 }
@@ -69,6 +70,7 @@ return require('packer').startup(function(use)
   use 'tversteeg/registers.nvim' -- NeoVim plugin to preview the contents of the registers
 
   -- LSP
+  use 'wbthomason/lsp-status.nvim' -- Utility functions for getting diagnostic status and progress messages from LSP servers, for use in the Neovim statusline
   use { 'neovim/nvim-lspconfig', config = configs.lspconfig } -- Quickstart configurations for the Nvim LSP client
   use 'williamboman/nvim-lsp-installer' -- Companion plugin for nvim-lspconfig that allows you to seamlessly manage LSP servers locally with :LspInstall. With full Windows support!
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim builtin LSP client
@@ -85,7 +87,7 @@ return require('packer').startup(function(use)
 
 
   -- Tree sitter
-  use 'nvim-treesitter/nvim-treesitter'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = configs.treesitter}
 
   -- Fuzzy finding
   use {

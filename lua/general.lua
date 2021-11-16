@@ -1,9 +1,6 @@
--- vim: foldmethod=marker
-
 local opt = vim.opt
 
-opt.backupdir = "~/.tmp"
-opt.relativenumber = true
+opt.backupdir = vim.fn.expand "~/.tmp"
 
 opt.diffopt = "filler,vertical"
 
@@ -13,6 +10,10 @@ opt.wildmenu = true                   -- zsh-like filename list chooser
 
 -- Files in general shouldn't start folded, can fix individual files with autocmd
 -- set foldlevelstart=99
+
+-- Use treesitter to fold
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Make it so I can switch buffers even if they have changed
 opt.hidden = true
@@ -28,7 +29,7 @@ vim.cmd [[autocmd TermOpen term://* set norelativenumber]]
 
 -- Run e on all elements of the arglist
 -- This is so that I populate a "tab" in CtrlSpace with all files from the arglist
-vim.cmd [[au VimEnter * nested silent! exe "argdo set eventignore-=Syntax e" | bn]]
+--vim.cmd [[au VimEnter * nested silent! exe "argdo set eventignore-=Syntax e" | bn]]
 
 -- Backup if necessary
 vim.cmd([[
@@ -55,6 +56,7 @@ opt.concealcursor = ""
 
 opt.scrolloff = 10 -- number of lines to keep above and below cursor
 opt.number = true -- show linenumbers
+opt.relativenumber = true
 
 opt.wrap = true -- wrap text
 opt.linebreak = true -- break lines when wrapping text
