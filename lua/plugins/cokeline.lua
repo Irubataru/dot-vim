@@ -1,60 +1,59 @@
 local get_hex = require('cokeline/utils').get_hex
-local space = {text = " "}
 require('cokeline').setup({
-  cycle_prev_next_mappings = true,
   default_hl = {
     focused = {
-      bg = "none"
+      fg = get_hex('Normal', 'fg'),
+      bg = get_hex('ColorColumn', 'bg'),
     },
     unfocused = {
-      fg = get_hex("Comment", "fg"),
-      bg = "none"
-    }
+      fg = get_hex('Comment', 'fg'),
+      bg = get_hex('ColorColumn', 'bg'),
+    },
   },
+
   components = {
-    space,
     {
-      text = function(buffer)
-        return buffer.devicon.icon
-      end,
+      text = '｜',
       hl = {
         fg = function(buffer)
-          return buffer.devicon.color
+          return
+            buffer.is_modified
+            and vim.g.terminal_color_3 -- yellow
+             or vim.g.terminal_color_2 -- green
         end
-      }
+      },
     },
     {
-      text = function(buffer)
-        return buffer.filename
-      end,
+      text = function(buffer) return buffer.devicon.icon .. ' ' end,
       hl = {
-        fg = function(buffer)
-          if buffer.is_focused then
-            return "#78dce8"
-          end
-          if buffer.is_modified then
-            return "#e5c463"
-          end
-          if buffer.lsp.errors ~= 0 then
-            return "#fc5d7c"
-          end
-        end,
-        style = function(buffer)
-          if buffer.is_focused then
-            return "underline"
-          end
-          return nil
-        end
-      }
+        fg = function(buffer) return buffer.devicon.color end,
+      },
     },
     {
-      text = function(buffer)
-        if buffer.is_readonly then
-          return " 🔒"
-        end
-        return ""
-      end
+      text = function(buffer) return buffer.index .. ': ' end,
     },
-    space
-  }
+    {
+      text = function(buffer) return buffer.unique_prefix end,
+      hl = {
+        fg = get_hex('Comment', 'fg'),
+        style = 'italic',
+      },
+    },
+    {
+      text = function(buffer) return buffer.filename .. ' ' end,
+      hl = {
+        style = function(buffer) return buffer.is_focused and 'bold' or nil end,
+      },
+    },
+    {
+      text = ' ',
+    },
+  },
 })
+
+local keymap = vim.api.nvim_set_keymap
+keymap('n', '[b', '<Plug>(cokeline-focus-prev)', {silent=true})
+keymap('n', ']b', '<Plug>(cokeline-focus-next)', {silent=true})
+
+keymap('n', '[B', '<Plug>(cokeline-switch-prev)', {silent=true})
+keymap('n', ']B', '<Plug>(cokeline-switch-next)', {silent=true})

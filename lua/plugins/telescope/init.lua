@@ -1,3 +1,16 @@
+local actions = require('telescope.actions')
+require('telescope').setup({
+  pickers = {
+    buffers = {
+      mappings = {
+        i = {
+          ["<C-x>"] = actions.delete_buffer,
+        },
+      },
+    },
+  },
+})
+
 local keymap = vim.api.nvim_set_keymap
 
 keymap('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
