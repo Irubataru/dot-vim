@@ -34,9 +34,6 @@ function! s:goyo_leave()
   set signcolumn=yes
   "set scrolloff=5
 
-  " Re-compute the CtrlSpace tabline
-  set tabline=%!ctrlspace#api#Tabline()
-
   " Turn off Limelight
   Limelight!
 endfunction

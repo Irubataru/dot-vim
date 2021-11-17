@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 local configs = {
   clang_format = function() require('plugins/clang-format') end,
   cmp = function() require('plugins/cmp') end,
+  commenter = function() require('plugins/commenter') end,
   cokeline = function() require('plugins/cokeline') end,
   cpp_enhanced_highlight = function() require('plugins/cpp_enhanced_highlight') end,
   easyalign = function() require('plugins/easyalign') end,
@@ -17,7 +18,7 @@ local configs = {
   lspconfig = function() require('plugins/lspconfig') end,
   luasnip = function() require('plugins/luasnip') end,
   mkdx = function() require('plugins/mkdx') end,
-  nerdtree = function() require('plugins/nerdtree') end,
+  nvim_tree = function() require('plugins/nvim_tree') end,
   operator_flashy = function() require('plugins/operator-flashy') end,
   quickscope = function() require('plugins/quickscope') end,
   signify = function() require('plugins/signify') end,
@@ -48,6 +49,7 @@ return require('packer').startup(function(use)
   use 'NLKNguyen/papercolor-theme'
   use 'chriskempson/base16-vim'
   use 'trevordmiller/nova-vim'
+  use 'dracula/vim'
 
   -- UI and look
   use {
@@ -78,13 +80,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-path' -- nvim-cmp source for path
   use 'hrsh7th/cmp-cmdline' -- nvim-cmp source for vim's cmdline
+  use { 'tzachar/cmp-tabnine', run = './install.sh' } -- TabNine plugin for hrsh7th/nvim-cmp
   use 'onsails/lspkind-nvim' -- vscode-like pictograms for neovim lsp completion items
   use { 'hrsh7th/nvim-cmp', config = configs.cmp } -- A completion plugin for neovim coded in Lua.tr
   use { 'L3MON4D3/LuaSnip', config = configs.luasnip } -- Snippet Engine for Neovim written in Lua.
-
-  -- TODO Find out what this is, also include in cmp config
-   use { 'tzachar/cmp-tabnine', run = './install.sh' } -- TabNine plugin for hrsh7th/nvim-cmp
-
 
   -- Tree sitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = configs.treesitter}
@@ -98,7 +97,11 @@ return require('packer').startup(function(use)
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
 
   -- Additional functionality
-  use 'preservim/nerdcommenter' -- Vim plugin for intensely nerdy commenting powers
+  --use 'preservim/nerdcommenter' -- Vim plugin for intensely nerdy commenting powers
+  use {
+    'numToStr/Comment.nvim', -- 🧠 💪 // Smart and powerful comment plugin for neovim. Supports commentstring, dot repeat, left-right/up-down motions, hooks, and more
+    config = configs.commenter
+  }
   use 'xolox/vim-misc' -- A dependency but can't remember of what
   use { 'aperezdc/vim-template', config = configs.template, cmd = { 'Template' } } -- Simple templates plugin for Vim
   use { 'embear/vim-localvimrc', config = configs.localvimrc } -- Search local vimrc files ('.lvimrc') in the tree (root dir up to current dir) and load them.
@@ -108,13 +111,9 @@ return require('packer').startup(function(use)
   use { 'AndrewRadev/linediff.vim', config = configs.linediff } -- A vim plugin to perform diffs on blocks of code
   use 'skywind3000/asyncrun.vim' -- Run Async Shell Commands in Vim 8.0 / NeoVim and Output to the Quickfix Window
   use {
-    'scrooloose/nerdtree',
-    config = configs.nerdtree,
-    cmd = { 'NERDTreeToggle' },
-    requires = { {
-      'Xuyuanp/nerdtree-git-plugin',
-      cmd = { 'NERDTreeToggle' }
-    } }
+    'kyazdani42/nvim-tree.lua', -- A file explorer tree for neovim written in lua
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = configs.nvim_tree
   }
 
   -- Note taking

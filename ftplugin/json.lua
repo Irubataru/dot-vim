@@ -1,1 +1,1 @@
-vim.bo.foldmethod = "syntax"
+vim.wo.foldmethod = "syntax"

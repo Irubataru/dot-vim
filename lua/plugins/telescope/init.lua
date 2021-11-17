@@ -8,6 +8,9 @@ require('telescope').setup({
         },
       },
     },
+    lsp_workspace_diagnostics = {
+
+    },
   },
 })
 
@@ -18,4 +21,6 @@ keymap('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<cr>",
 keymap('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<cr>", {noremap = true})
 keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin').help_tags()<cr>", {noremap = true})
 
+keymap('n', '<leader>fe', "<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics({severity = 1})<cr>", {noremap = true})
+keymap('n', '<leader>fE', "<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>", {noremap = true})
 keymap('n', '<C-b>', "<cmd>lua require('telescope.builtin').buffers()<cr>", {noremap = true})

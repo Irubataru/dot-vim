@@ -1,5 +1,6 @@
 local get_hex = require('cokeline/utils').get_hex
 require('cokeline').setup({
+  cycle_prev_next_mappings = true,
   default_hl = {
     focused = {
       fg = get_hex('Normal', 'fg'),
@@ -10,6 +11,14 @@ require('cokeline').setup({
       bg = get_hex('ColorColumn', 'bg'),
     },
   },
+  buffers = {
+    filter = function(buffer)
+      return
+        buffer.type ~= "terminal" and
+        buffer.type ~= "quickfix" and
+        buffer.filetype ~= "fugitive"
+    end,
+  },
 
   components = {
     {
@@ -17,9 +26,9 @@ require('cokeline').setup({
       hl = {
         fg = function(buffer)
           return
-            buffer.is_modified
-            and vim.g.terminal_color_3 -- yellow
-             or vim.g.terminal_color_2 -- green
+          buffer.is_modified
+          and vim.g.terminal_color_3 -- yellow
+          or vim.g.terminal_color_2 -- green
         end
       },
     },

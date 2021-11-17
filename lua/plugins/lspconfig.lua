@@ -53,6 +53,8 @@ local on_attach = function(client)
   buf_keymap(0, 'i', "<c-s>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", {noremap = true})
 
   buf_keymap(0, 'n', "<space>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", {noremap = true})
+  buf_keymap(0, 'n', "<space>cf", "<cmd>lua vim.lsp.buf.formatting()<cr>", {noremap = true})
+  telescope_map('<a-cr>', 'lsp_code_actions')
   telescope_map('<leader>ca', 'lsp_code_actions')
 
   buf_keymap(0, 'n', "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", {noremap = true})
