@@ -2,4 +2,4 @@
 -- Makefile specific settings --
 --------------------------------
 
-vim.bo.foldmethod = "marker"
+vim.wo.foldmethod = "marker"
